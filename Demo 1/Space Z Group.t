@@ -84,8 +84,8 @@ gameMain: GameMainDef
  */
 Bedroom: Room 'Bedroom'
     "You start off in your bedroom. "
-    east = Bathdoor
-    west = Commondoor
+    east = Commondoor
+    west = Bathdoor
 ;
 
 + Bathdoor: Door 'Bathdoor' 'Bathdoor'
@@ -98,7 +98,7 @@ Bedroom: Room 'Bedroom'
 Bathroom: Room 'Bathroom'
     "bathrooms and lockers for spacestation. "
 
-    west = Inbathdoor
+    east = Inbathdoor
 ;
 
 + Inbathdoor: Door -> Bathdoor 'Bathdoor' 'Bathdoor'
@@ -108,55 +108,62 @@ Bathroom: Room 'Bathroom'
 Commonroom: Room 'Commonroom'
     "Room for recreational activities. "
 
-    north = Entryroom
+    north = Entrydoor
     south = Messhall
-    east = incommondoor
-    west = Medbay
+    west = incommondoor
+    east = Medbay
 ;
 + incommondoor: Door -> Commondoor 'Commondoor' 'Commondoor'
     "door in common to bedroom"
 ;
-
++ Entrydoor: Door 'Entrydoor' 'Entrydoor'
+    "door in commonroom to entryroom"
+;
 Entryroom: Room 'Entryroom'
     "room connecting outside and ships."
     
-    west = Ships
-    south = Commonroom
+    east = Ships
+    south = Inentrydoor
 ;
++ Inentrydoor: Door -> Entrydoor 'Entrydoor' 'Entrydoor'
+    "door in entryroom to commonroom"
+;
+
 
 Ships: Room 'Ships'
     "room to escape/win game"
     
-    east = Entryroom
+    west = Entryroom
 ;
 
 Messhall: Room 'Messhall'
     "room where everyone eats."
     
-    east = Kitchen
+    west = Kitchen
+    north = Commonroom
 ;
 
 Kitchen: Room 'Kitchen'
     "room with chef starting point"
     
-    west = Messhall
+    east = Messhall
 ;
 Medbay: Room 'Medbay'
     "room with doctor starting point"
    
-    east = Commonroom
+    west = Commonroom
     south = Securityroom
 ;
 Securityroom: Room 'Securityroom'
     "room with veteran in it"
     
     north = Medbay
-    west = Comms
+    east = Comms
 ;
 Comms: Room 'Comms'
     "room with communications tower"
     
-    east = SecurityRoom
+    west = Securityroom
 ;
 /*
  *   Define the player character.  The name of this object is not

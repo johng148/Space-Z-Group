@@ -1,0 +1,11 @@
+<eventscript>
+<line>w
+<line>e
+<line>e
+<line>s
+<line>w
+<line>e
+<line>n
+<line>n
+<line>s
+<eof>
