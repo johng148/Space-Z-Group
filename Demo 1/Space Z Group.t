@@ -131,7 +131,7 @@ Entryroom: Room 'Entryroom'
 
 
 Ships: Room 'Ships'
-    "room to escape/win game"
+    "room to escape/win games"
     
     west = Entryroom
 ;
