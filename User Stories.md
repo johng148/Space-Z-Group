@@ -1,5 +1,5 @@
 
-1: Core features that need to be present
+1: Core features that need to be present <br />
 As a gamer, I expect certain features to be present to ensure a quality game-playing experience.
 1.1: Saving the game
 As a gamer, I want to be able to save the progress of my game so that I don’t have to restart the game every time; just pick up where I left off.
