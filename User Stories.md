@@ -39,11 +39,8 @@ As a reviewer, I want a game that stands out among other text based games that I
 5.1 Aspects that set the game apart from other games <br />
 As a reviewer, I want a game that provides the user with something unique so that I can provide a comprehensive review that covers aspects of a game that I have never reviewed before. <br />
 Elaboration: The game should provide some aspect that makes it stand out to its users among the other many text based games that exist. <br />
-
 Constraints: The sheer number of zombie stories that exist can cause our game to seem clichéd. <br />
-
 Effort Estimation: 72 person-hours <br />
-
 Acceptance Test: Research other text-based games to see if anyone has already published zombie adventures and play the game to see how similar or how unique the storyline is. <br />
  
 6: Marketability <br />
@@ -51,11 +48,8 @@ As a video game digital distribution service, I expect a game that is marketable
 6.1 Wider Audience Appeal <br />
 As a video game digital distribution service, I expect a game that will appeal to a vast audience so that we can maximize sales of the game. <br />
 Elaboration: The game should be marketable to a large percentage of the customers that use the distribution service. <br />
-
 Constraints: The different tastes in games that each individual may have. <br />
-
 Effort Estimation: 7 person-hours <br />
-
 Acceptance Test: Gather statistics from gaming platforms to analyze the type of games that are popular on the platform to see whether platforms purchase/distribute text-based games and which platforms are popular for text-based game distributions. <br />
  
 
