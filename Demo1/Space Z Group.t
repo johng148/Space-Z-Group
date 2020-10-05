@@ -88,20 +88,20 @@ Bedroom: Room 'Bedroom'
     west = Bathdoor
 ;
 
-+ Bathdoor: Door 'Bathdoor' 'Bathdoor'
++ Bathdoor: Door 'Bath door' 'Bath door'
     "door in bedroom to bathroom"
 ;
-+ Commondoor: Door 'Commondoor' 'Commondoor'
++ Commondoor: Door 'Common door' 'Common door'
     "door in bedroom to commonroom"
 ;
     
 Bathroom: Room 'Bathroom'
     "bathrooms and lockers for spacestation. "
 
-    east = Inbathdoor
+    east = InBathdoor
 ;
 
-+ Inbathdoor: Door -> Bathdoor 'Bathdoor' 'Bathdoor'
++ InBathdoor: Door -> Bathdoor 'Bath door' 'Bath door'
     "door in bathroom to bedrooms"
 ;
 
@@ -110,74 +110,74 @@ Commonroom: Room 'Commonroom'
 
     north = Entrydoor
     south = Messdoor
-    west = incommondoor
+    west = inCommondoor
     east = Meddoor
 ;
-+ incommondoor: Door -> Commondoor 'Commondoor' 'Commondoor'
++ inCommondoor: Door -> Commondoor 'Common door' 'Common door'
     "door in common to bedroom"
 ;
-+ Entrydoor: Door 'Entrydoor' 'Entrydoor'
++ Entrydoor: Door 'Entry door' 'Entry door'
     "door in commonroom to entryroom"
 ;
-+ Messdoor: Door 'Messdoor' 'Messdoor'
++ Messdoor: Door 'Mess door' 'Mess door'
     "door in commonroom to messroom"
 ;
-+ Meddoor: Door 'Meddoor' 'Meddoor'
++ Meddoor: Door 'Med door' 'Med door'
     "door in commonroom to medbay"
 ;
 Entryroom: Room 'Entryroom'
     "room connecting outside and ships."
     
     east = Shipdoor
-    south = Inentrydoor
+    south = InEntrydoor
 ;
-+ Inentrydoor: Door -> Entrydoor 'Entrydoor' 'Entrydoor'
++ InEntrydoor: Door -> Entrydoor 'Entry door' 'Entry door'
     "door in entryroom to commonroom"
 ;
-+ Shipdoor: Door 'Shipdoor' 'Shipdoor'
++ Shipdoor: Door 'Ship door' 'Ship door'
     "door in entryroom to shiproom."
 ;
 
 Ships: Room 'Ships'
     "room to escape/win games"
     
-    west = Inshipdoor
+    west = InShipdoor
 ;
-+ Inshipdoor: Door -> Shipdoor 'Shipdoor' 'Shipdoor'
++ InShipdoor: Door -> Shipdoor 'Ship door' 'Ship door'
     "door in shiproom to entryroom."
 ;
 Messhall: Room 'Messhall'
     "room where everyone eats."
     
     west = Kitchendoor
-    north = Inmessdoor
+    north = InMessdoor
 ;
 
-+ Inmessdoor: Door -> Messdoor 'Messdoor' 'Messdoor'
++ InMessdoor: Door -> Messdoor 'Mess door' 'Mess door'
     "door in messroom to commonroom"
 ;
 
-+ Kitchendoor: Door 'Kitchendoor' 'Kitchendoor'
++ Kitchendoor: Door 'Kitchen door' 'Kitchen door'
     "door in messhall to kitchen"
 ;
 
 Kitchen: Room 'Kitchen'
     "room with chef starting point"
     
-    east = Inkitchendoor
+    east = InKitchendoor
 ;
 
-+ Inkitchendoor: Door -> Kitchendoor 'Kitchendoor' 'Kitchendoor'
++ InKitchendoor: Door -> Kitchendoor 'Kitchen door' 'Kitchen door'
     "door in kitchen to messhall"
 ;
 
 Medbay: Room 'Medbay'
     "room with doctor starting point"
    
-    west = Inmeddoor
+    west = InMeddoor
     south = Securitydoor
 ;
-+ Inmeddoor: Door -> Meddoor 'Meddoor' 'Meddoor'
++ InMeddoor: Door -> Meddoor 'Med door' 'Med door'
     "doon in medbay to Commonroom"
 ;
 + Securitydoor: Door 'Security door' 'Security door'
