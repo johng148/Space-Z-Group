@@ -109,9 +109,9 @@ Commonroom: Room 'Commonroom'
     "Room for recreational activities. "
 
     north = Entrydoor
-    south = Messhall
+    south = Messdoor
     west = incommondoor
-    east = Medbay
+    east = Meddoor
 ;
 + incommondoor: Door -> Commondoor 'Commondoor' 'Commondoor'
     "door in common to bedroom"
@@ -119,51 +119,89 @@ Commonroom: Room 'Commonroom'
 + Entrydoor: Door 'Entrydoor' 'Entrydoor'
     "door in commonroom to entryroom"
 ;
++ Messdoor: Door 'Messdoor' 'Messdoor'
+    "door in commonroom to messroom"
+;
++ Meddoor: Door 'Meddoor' 'Meddoor'
+    "door in commonroom to medbay"
+;
 Entryroom: Room 'Entryroom'
     "room connecting outside and ships."
     
-    east = Ships
+    east = Shipdoor
     south = Inentrydoor
 ;
 + Inentrydoor: Door -> Entrydoor 'Entrydoor' 'Entrydoor'
     "door in entryroom to commonroom"
 ;
-
++ Shipdoor: Door 'Shipdoor' 'Shipdoor'
+    "door in entryroom to shiproom."
+;
 
 Ships: Room 'Ships'
     "room to escape/win games"
     
-    west = Entryroom
+    west = Inshipdoor
 ;
-
++ Inshipdoor: Door -> Shipdoor 'Shipdoor' 'Shipdoor'
+    "door in shiproom to entryroom."
+;
 Messhall: Room 'Messhall'
     "room where everyone eats."
     
-    west = Kitchen
-    north = Commonroom
+    west = Kitchendoor
+    north = Inmessdoor
+;
+
++ Inmessdoor: Door -> Messdoor 'Messdoor' 'Messdoor'
+    "door in messroom to commonroom"
+;
+
++ Kitchendoor: Door 'Kitchendoor' 'Kitchendoor'
+    "door in messhall to kitchen"
 ;
 
 Kitchen: Room 'Kitchen'
     "room with chef starting point"
     
-    east = Messhall
+    east = Inkitchendoor
 ;
+
++ Inkitchendoor: Door -> Kitchendoor 'Kitchendoor' 'Kitchendoor'
+    "door in kitchen to messhall"
+;
+
 Medbay: Room 'Medbay'
     "room with doctor starting point"
    
-    west = Commonroom
-    south = Securityroom
+    west = Inmeddoor
+    south = Securitydoor
+;
++ Inmeddoor: Door -> Meddoor 'Meddoor' 'Meddoor'
+    "doon in medbay to Commonroom"
+;
++ Securitydoor: Door 'Security door' 'Security door'
+    "door in medbay to Security room"
 ;
 Securityroom: Room 'Securityroom'
     "room with veteran in it"
     
-    north = Medbay
-    east = Comms
+    north = InSecuritydoor
+    east = Commsdoor
+;
++ InSecuritydoor: Door -> Securitydoor 'Security door' 'Security door'
+    "Door in security room to Medbayy"
+;
++ Commsdoor: Door 'Comms door' 'Comms door'
+    "door in securityroom to Comms room."
 ;
 Comms: Room 'Comms'
     "room with communications tower"
     
-    west = Securityroom
+    west = InCommsdoor
+;
++ InCommsdoor: Door -> Commsdoor 'Comms door' 'Comms door'
+    "door in Comms room to Security room."
 ;
 /*
  *   Define the player character.  The name of this object is not
