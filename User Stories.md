@@ -5,7 +5,7 @@ As a gamer, I expect certain features to be present to ensure a quality game-pla
 As a gamer, I want to be able to save the progress of my game so that I don’t have to restart the game every time; just pick up where I left off. <br /> 
 Elaboration: Users should have the ability to save the progress that they have made in a game. <br /> 
 Constraints: Users can only save the game at check points and not at any point in the game that they want. <br /> 
-Effort Estimation: 4 person-hours <br /> <br />
+Effort Estimation: 4 person-hours <br /> 
 Acceptance Test: Perform a successful save on a currently running game then be able to reload the game at the last save point. <br /> 
   <br /> 
 2: Replayability  <br /> 
