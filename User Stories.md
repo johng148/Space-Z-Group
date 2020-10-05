@@ -1,14 +1,14 @@
 
 1: Core features that need to be present <br />
-As a gamer, I expect certain features to be present to ensure a quality game-playing experience. <br /> <br />
+As a gamer, I expect certain features to be present to ensure a quality game-playing experience. <br /> 
 1.1: Saving the game <br />
-As a gamer, I want to be able to save the progress of my game so that I don’t have to restart the game every time; just pick up where I left off. <br /> <br />
-Elaboration: Users should have the ability to save the progress that they have made in a game. <br /> <br />
-Constraints: Users can only save the game at check points and not at any point in the game that they want. <br /> <br />
+As a gamer, I want to be able to save the progress of my game so that I don’t have to restart the game every time; just pick up where I left off. <br /> 
+Elaboration: Users should have the ability to save the progress that they have made in a game. <br /> 
+Constraints: Users can only save the game at check points and not at any point in the game that they want. <br /> 
 Effort Estimation: 4 person-hours <br /> <br />
-Acceptance Test: Perform a successful save on a currently running game then be able to reload the game at the last save point. <br /> <br />
-  <br /> <br />
-2: Replayability  <br /> <br />
+Acceptance Test: Perform a successful save on a currently running game then be able to reload the game at the last save point. <br /> 
+  <br /> 
+2: Replayability  <br /> 
 As an arcade owner, I want a game that has high replayability so that my customers will come back to it again and again. <br />
 2.1: Making sure the customers come back <br />
 As an arcade owner, I want the customers to want to come back to play the game multiple times to maximize profit. <br />
