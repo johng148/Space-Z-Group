@@ -82,8 +82,8 @@ gameMain: GameMainDef
  *   name you'd prefer.  The player character's starting location is simply
  *   the location where the "me" actor is initially located.  
  */
-Bedroom: Room 'Bedroom'
-    "You start off in your bedroom. "
+SleepingQuarter: Room 'Sleeping quarters'
+    "You start off in your Sleeping Quarter. "
     east = Commondoor
     west = Bathdoor
 ;
@@ -105,7 +105,7 @@ Bathroom: Room 'Bathroom'
     "door in bathroom to bedrooms"
 ;
 
-Commonroom: Room 'Commonroom'
+CommonRoom: Room 'Common room'
     "Room for recreational activities. "
 
     north = Entrydoor
@@ -125,7 +125,7 @@ Commonroom: Room 'Commonroom'
 + Meddoor: Door 'Med door' 'Med door'
     "door in commonroom to medbay"
 ;
-Entryroom: Room 'Entryroom'
+DockingComp: Room 'Docking Compartment'
     "room connecting outside and ships."
     
     east = Shipdoor
@@ -138,7 +138,7 @@ Entryroom: Room 'Entryroom'
     "door in entryroom to shiproom."
 ;
 
-Ships: Room 'Ships'
+ShuttleBay: Room 'Shuttle Bay'
     "room to escape/win games"
     
     west = InShipdoor
@@ -146,10 +146,10 @@ Ships: Room 'Ships'
 + InShipdoor: Door -> Shipdoor 'Ship door' 'Ship door'
     "door in shiproom to entryroom."
 ;
-Messhall: Room 'Messhall'
+MessHall: Room 'Mess Hall'
     "room where everyone eats."
     
-    west = Kitchendoor
+    west = Galleydoor
     north = InMessdoor
 ;
 
@@ -157,21 +157,21 @@ Messhall: Room 'Messhall'
     "door in messroom to commonroom"
 ;
 
-+ Kitchendoor: Door 'Kitchen door' 'Kitchen door'
-    "door in messhall to kitchen"
++ Galleydoor: Door 'Galley door' 'Galley door'
+    "door in messhall to Galley"
 ;
 
-Kitchen: Room 'Kitchen'
+Galley: Room 'Galley'
     "room with chef starting point"
     
-    east = InKitchendoor
+    east = InGalleydoor
 ;
 
-+ InKitchendoor: Door -> Kitchendoor 'Kitchen door' 'Kitchen door'
-    "door in kitchen to messhall"
++ InGalleydoor: Door -> Galleydoor 'Galley door' 'Galley door'
+    "door in Galley to messhall"
 ;
 
-Medbay: Room 'Medbay'
+MedBay: Room 'MedBay'
     "room with doctor starting point"
    
     west = InMeddoor
@@ -183,25 +183,25 @@ Medbay: Room 'Medbay'
 + Securitydoor: Door 'Security door' 'Security door'
     "door in medbay to Security room"
 ;
-Securityroom: Room 'Securityroom'
+Securityroom: Room 'Security room'
     "room with veteran in it"
     
     north = InSecuritydoor
-    east = Commsdoor
+    east = Bridgedoor
 ;
 + InSecuritydoor: Door -> Securitydoor 'Security door' 'Security door'
     "Door in security room to Medbayy"
 ;
-+ Commsdoor: Door 'Comms door' 'Comms door'
-    "door in securityroom to Comms room."
++ Bridgedoor: Door 'Bridge door' 'Bridge door'
+    "door in security room to Bridge."
 ;
-Comms: Room 'Comms'
-    "room with communications tower"
+Bridge: Room 'Bridge'
+    "Bridge with communications tower"
     
-    west = InCommsdoor
+    west = InBridgedoor
 ;
-+ InCommsdoor: Door -> Commsdoor 'Comms door' 'Comms door'
-    "door in Comms room to Security room."
++ InBridgedoor: Door -> Bridgedoor 'Bridge door' 'Bridge door'
+    "door in Bridge  to Security room."
 ;
 /*
  *   Define the player character.  The name of this object is not
@@ -217,7 +217,7 @@ Comms: Room 'Comms'
  *   character, and we'll establish this one as the PC in main(), below.  
  */
 + me: Actor
-    location = Bedroom
+    location = SleepingQuarter
 ;
 
 
