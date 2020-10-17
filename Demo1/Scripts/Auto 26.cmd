@@ -1,4 +1,3 @@
 <eventscript>
+<line>w
 <line>e
-<line>n
-<eof>

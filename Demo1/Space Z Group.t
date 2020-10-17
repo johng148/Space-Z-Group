@@ -83,14 +83,18 @@ gameMain: GameMainDef
  *   the location where the "me" actor is initially located.  
  */
 SleepingQuarter: Room 'Sleeping quarters'
-    "You start off in your Sleeping Quarter. "
+    "You start off in your Sleeping Quarters. "
     east = Commondoor
     west = Bathdoor
+    
 ;
 
-+ Bathdoor: Door 'Bath door' 'Bath door'
-    "door in bedroom to bathroom"
++ Bathdoor: LockableWithKey, Door 'Bath door' 'Bath door'
+    "door in Sleeping quarters to bathroom"
+    keyList = [BathKey]
+    
 ;
+
 + Commondoor: Door 'Common door' 'Common door'
     "door in bedroom to commonroom"
 ;
@@ -101,14 +105,15 @@ Bathroom: Room 'Bathroom'
     east = InBathdoor
 ;
 
-+ InBathdoor: Door -> Bathdoor 'Bath door' 'Bath door'
++ InBathdoor: LockableWithKey, Door -> Bathdoor 'Bath door' 'Bath door'
     "door in bathroom to bedrooms"
+        keyList = [BathKey]
 ;
 
 CommonRoom: Room 'Common room'
     "Room for recreational activities. "
 
-    north = Entrydoor
+    north = Dockingdoor
     south = Messdoor
     west = inCommondoor
     east = Meddoor
@@ -116,36 +121,40 @@ CommonRoom: Room 'Common room'
 + inCommondoor: Door -> Commondoor 'Common door' 'Common door'
     "door in common to bedroom"
 ;
-+ Entrydoor: Door 'Entry door' 'Entry door'
-    "door in commonroom to entryroom"
++ Dockingdoor: Door 'Docking door' 'Docking door'
+    "door in commonroom to docking compartment"
 ;
 + Messdoor: Door 'Mess door' 'Mess door'
     "door in commonroom to messroom"
 ;
-+ Meddoor: Door 'Med door' 'Med door'
++ Meddoor: LockableWithKey, Door 'Med door' 'Med door'
     "door in commonroom to medbay"
+        keyList = [MedKey]
 ;
 DockingComp: Room 'Docking Compartment'
-    "room connecting outside and ships."
+    "room connecting Docking Compartment and Shuttle Bay."
     
-    east = Shipdoor
-    south = InEntrydoor
+    east = Shuttledoor
+    south = InDockingdoor
 ;
-+ InEntrydoor: Door -> Entrydoor 'Entry door' 'Entry door'
-    "door in entryroom to commonroom"
++ InDockingdoor: Door -> Dockingdoor 'Docking door' 'Docking door'
+    "door in docking compartment to commonroom"
 ;
-+ Shipdoor: Door 'Ship door' 'Ship door'
-    "door in entryroom to shiproom."
++ Shuttledoor:LockableWithKey, Door 'Shuttle Bay door' 'Shuttle Bay door'
+    "door in Docking compartment to Shuttle bay."
+    keyList = [ShuttleKey]
 ;
 
 ShuttleBay: Room 'Shuttle Bay'
     "room to escape/win games"
     
-    west = InShipdoor
+    west = InShuttledoor
 ;
-+ InShipdoor: Door -> Shipdoor 'Ship door' 'Ship door'
-    "door in shiproom to entryroom."
++ InShuttledoor: Lockable, Door -> Shuttledoor 'Shuttle Bay door' 'Shuttle Bay door'
+    "door in Shuttle Bay to Docking compartment."
 ;
+
+
 MessHall: Room 'Mess Hall'
     "room where everyone eats."
     
@@ -177,24 +186,32 @@ MedBay: Room 'MedBay'
     west = InMeddoor
     south = Securitydoor
 ;
-+ InMeddoor: Door -> Meddoor 'Med door' 'Med door'
+
++ InMeddoor: LockableWithKey, Door -> Meddoor 'Med door' 'Med door'
     "doon in medbay to Commonroom"
 ;
-+ Securitydoor: Door 'Security door' 'Security door'
+
+
++ Securitydoor: LockableWithKey, Door 'Security door' 'Security door'
     "door in medbay to Security room"
+    keyList = [SecurityKey]
 ;
+
 Securityroom: Room 'Security room'
     "room with veteran in it"
     
     north = InSecuritydoor
     east = Bridgedoor
 ;
-+ InSecuritydoor: Door -> Securitydoor 'Security door' 'Security door'
-    "Door in security room to Medbayy"
+
++ InSecuritydoor: Lockable,  Door -> Securitydoor 'Security door' 'Security door'
+    "Door in security room to Medbay"
 ;
+
 + Bridgedoor: Door 'Bridge door' 'Bridge door'
     "door in security room to Bridge."
 ;
+
 Bridge: Room 'Bridge'
     "Bridge with communications tower"
     
@@ -203,6 +220,11 @@ Bridge: Room 'Bridge'
 + InBridgedoor: Door -> Bridgedoor 'Bridge door' 'Bridge door'
     "door in Bridge  to Security room."
 ;
+SecurityKey : Key 'Security key card' 'Security key card' @Bathroom;
+MedKey : Key 'MedBay key card' 'MedBay key card' @Galley;
+ShuttleKey : Key 'Shuttle bay key card' 'Shuttle bay key card' @Bridge;
+BathKey : Key 'bathroom key card' 'bathroom key card' @MedBay;
+
 /*
  *   Define the player character.  The name of this object is not
  *   important, but it MUST match the name we use to initialize
@@ -218,6 +240,7 @@ Bridge: Room 'Bridge'
  */
 + me: Actor
     location = SleepingQuarter
+
 ;
 
 

@@ -1,9 +1,0 @@
-<eventscript>
-<line>e
-<line>w
-<line>w
-<line>w
-<line>s
-<line>n
-<line>s
-<line>w
