@@ -1,2 +1,0 @@
-<eventscript>
-<line>take all
