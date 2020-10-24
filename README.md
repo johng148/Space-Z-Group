@@ -10,7 +10,8 @@ During the exploration of the space station, the player can travel from room to 
 
 **Engine:**
 
-For making the game we are using TADS as an engine. 
+To create the game we are using TADS (Text Adventure Development System) as an engine.
+https://www.tads.org/
 
 **Current Progress:**
 
@@ -21,4 +22,3 @@ So far we have created rooms for the space station, added some key cards for sai
 **Demo 1 (10/24/2020)**
 
 So far we have one NPC, the doctor. We have also added three objects: a sword, a medkit, and a zombie hand. For the doctor we added lines, responses, and knowledge was added to only allow players to access specific conversations if they know something about the zombie hand.
-
