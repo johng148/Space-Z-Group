@@ -9,6 +9,7 @@ Game Description:
 During the exploration of the space station, the player can travel from room to room. In going to the rooms the player can meet NPC's, gather items, and encounter zombies to fight. The fights would be against zombies and it would be turn based. The player would be tasked to make their way throughout the space station into the space shuttle to escape, bringing any surviving NPC’s along. 
 
 Engine:
+
 For making the game we are using TADS as an engine. 
 
 Current Progress:
