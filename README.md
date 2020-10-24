@@ -15,8 +15,10 @@ For making the game we are using TADS as an engine.
 **Current Progress:**
 
 **Demo 0 (10/4/2020)**
+
 So far we have created rooms for the space station, added some key cards for said rooms, and created a map for the space station.
 
-**Demo 1 (10/24/2020):**
+**Demo 1 (10/24/2020)**
+
 So far we have one NPC, the doctor. We have also added three objects: a sword, a medkit, and a zombie hand. For the doctor we added lines, responses, and knowledge was added to only allow players to access specific conversations if they know something about the zombie hand.
 
