@@ -4,14 +4,14 @@
 DebugToolbar:rebarWidth:I:-1
 build:ext resfile cnt:I:0
 build:defaults set:I:1
-watch win:pos:R:312,526,596,637
 watch win:vis:I:0
+watch win:pos:R:312,526,596,637
 build:c ops:I:0
-line wrap:Space Z Group.t:S:0:N
 SearchToolbar:rebarNewLine:I:0
-log win vis::I:1
-log win pos::R:172,124,1534,799
 MenuBar:rebarVis:I:1
+log win pos::R:180,155,1270,555
+log win vis::I:0
+line wrap:%tads%lib\adv3\actor.t:S:0:N
 DocToolbar:rebarIndex:I:3
 build:include_files-sys:S:0:system
 build:include_files-sys:S:1:system
@@ -38,9 +38,9 @@ build:zipfile:S:0:Space Z Group.zip
 watch win:sep xpos 0:I:142
 watch win:sep xpos 1:I:142
 watch win:sep xpos 2:I:142
-watch win:sep xpos 3:I:142
 build:installer options:S:0:name=Space Z Group
 build:installer options:S:1:savext=Space Z Group
+watch win:sep xpos 3:I:142
 search:start at top:I:0
 EditToolbar:rebarNewLine:I:1
 proj search:exact case:I:0
@@ -49,41 +49,43 @@ auto-script:quit sequences:S:0:<nocase>[<]line[>]<space>*q(uit)?<space>*
 auto-script:quit sequences:S:1:<nocase>[<]line[>]<space>*y.*
 SearchToolbar:rebarIndex:I:2
 search:wrap:I:1
-auto-script:next-id:I:48
+auto-script:next-id:I:162
 SearchToolbar:rebarWidth:I:281
-search:text:S:0:SecurityKey
-search:text:S:1:
 docking config::S:0:CL
 docking config::S:1:W0,170,270,2,495,302,645,D,L,project win
 docking config::S:2:W0,170,150,175,495,345,645,D,L,script win
 docking config::S:3:CB
 docking config::S:4:W3,270,67,304,495,604,645,D,B,watch win
 docking config::S:5:W3,270,67,2,495,302,645,D,B,locals win
-docking config::S:6:W-1,170,170,26,26,1132,445,M,R,help win
+docking config::S:6:W-1,170,170,0,0,1106,439,M,R,log win
 docking config::S:7:W-1,170,170,26,26,1132,445,M,R,stack win
-docking config::S:8:W-1,170,170,0,0,1106,439,M,R,log win
-locals win:pos:R:10,526,294,637
+docking config::S:8:W-1,170,170,26,26,1132,445,M,R,help win
+search:text:S:0:converstation
+search:text:S:1:conversation
+src win split:Space Z Group.t:S:0:0.000000
 locals win:vis:I:0
+locals win:pos:R:10,526,294,637
 main win max::I:1
 proj search:collapse spaces:I:0
 search:exact case:I:0
-mdi win list::S:0::log
-mdi win list::S:1:Space Z Group.t
-mdi win list::S:2::help
 build:webpage dir:S:0:web
-main win pos::R:-8,-8,1544,832
+mdi win list::S:0:Space Z Group.t
+mdi win list::S:1::help
 build:srczipfile:S:0:Space Z GroupSource.zip
+main win pos::R:-8,-8,1928,1048
 proj search:whole word:I:0
-help win pos::R:206,181,1296,561
 help win vis::I:1
+help win pos::R:206,181,1296,561
 build:ignore case:I:0
-docsearch win vis::I:0
 build:exe:S:0:Space Z Group.exe
-script win:pos:R:2,669,163,799
+docsearch win vis::I:0
 script win:vis:I:1
+script win:pos:R:2,890,163,1015
 build:use charmap:I:0
 EditToolbar:rebarIndex:I:1
 hist win vis::I:0
+src win selrange:Space Z Group.t:S:0:0,0
+src win selrange:Space Z Group.t:S:1:7977,7977
 EditToolbar:rebarWidth:I:1015
 build:include_files:S:0:tads.h
 build:include_files:S:1:t3.h
@@ -104,44 +106,50 @@ build:include_files:S:15:gramprod.h
 build:include_files:S:16:adv3.h
 build:include_files:S:17:strcomp.h
 build:include_files:S:18:en_us.h
-src win split:Space Z Group.t:S:0:0.000000
 SearchToolbar:rebarVis:I:1
 MenuBar:rebarNewLine:I:0
 proj search:regex:I:0
+src win split:%tads%lib\adv3\actor.t:S:0:0.000000
 locals win:sep xpos 0:I:142
 locals win:sep xpos 1:I:142
 search:whole word:I:0
-DebugToolbar:rebarNewLine:I:1
 build:debug_image_file:S:0:debug\Space Z Group.t3
-search dlg:old searches:S:0:SecurityKey
-search dlg:old searches:S:1:
-find dialog:pos:R:546,285,990,538
+DebugToolbar:rebarNewLine:I:1
+search dlg:old searches:S:0:converstation
+search dlg:old searches:S:1:samples
+search dlg:old searches:S:2:SecurityKey
+search dlg:old searches:S:3:
+src win edit mode:Space Z Group.t:S:0:TADS 3
+find dialog:pos:R:546,285,990,579
 search dlg:old search opts:S:0:
 search dlg:old search opts:S:1:
-src win selrange:Space Z Group.t:S:0:0,0
-src win selrange:Space Z Group.t:S:1:5570,5570
+search dlg:old search opts:S:2:
+search dlg:old search opts:S:3:
 search:regex:I:0
-mdi tab order::S:0:1,2,0
+src win selrange:%tads%lib\adv3\actor.t:S:0:0,0
+src win selrange:%tads%lib\adv3\actor.t:S:1:325974,325974
+mdi tab order::S:0:0,1
 build:rlsgam:S:0:Space Z Group.t3
 EditToolbar:rebarVis:I:1
 main win mdi max::I:1
 auto-script:default quit sequences set:I:1
-src win edit mode:Space Z Group.t:S:0:TADS 3
 DocToolbar:rebarNewLine:I:0
+src win edit mode:%tads%lib\adv3\actor.t:S:0:TADS 3
 MenuBar:rebarIndex:I:0
-mdi win title::S:0:
-mdi win title::S:1:Space Z Group.t
-mdi win title::S:2:
+mdi win title::S:0:Space Z Group.t
+mdi win title::S:1:
 search:dir:I:1
-MenuBar:rebarWidth:I:-1
 build:installer prog:S:0:Space Z Group_Setup.exe
-project win:pos:R:2,121,163,643
+MenuBar:rebarWidth:I:-1
 project win:vis:I:1
+project win:pos:R:2,121,163,864
 auto-script:dir:S:0:Scripts
-stack win pos::R:206,181,1296,561
-filesearch win vis::I:0
 stack win vis::I:0
+filesearch win vis::I:0
+stack win pos::R:206,181,1296,561
 DebugToolbar:rebarIndex:I:4
+line wrap:Space Z Group.t:S:0:N
 searchMode::I:1
-search dlg:old repl text:S:0:
+search dlg:old repl text:S:0:conversation
+search dlg:old repl text:S:1:
 

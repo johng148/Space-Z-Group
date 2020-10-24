@@ -3,11 +3,12 @@
 <line>e
 <line>s
 <line>w
-<line>take 
+<line>pick up key
 <line>e
 <line>n
+<line>w
 <line>e
-<line>unlock med door 
 <line>e
-<line>take
-<line>s
+<line>unlcok
+<line>unlock
+<line>e
