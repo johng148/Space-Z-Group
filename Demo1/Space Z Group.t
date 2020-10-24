@@ -196,7 +196,9 @@ MedBay: Room 'MedBay'
     "door in medbay to Security room"
     keyList = [SecurityKey]
 ;
-
++ FirstAidKit: Thing 'First aid kit' 'First aid kit'
+    "A first aid kit that can be used to heal most wounds."
+;
 Securityroom: Room 'Security room'
     "room with veteran in it"
     
@@ -212,6 +214,9 @@ Securityroom: Room 'Security room'
     "door in security room to Bridge."
 ;
 
++ Sword: Thing 'Sword' 'Sword'
+    "A well sharpened sword, could be useful"
+;
 Bridge: Room 'Bridge'
     "Bridge with communications tower"
     
