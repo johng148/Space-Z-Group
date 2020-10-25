@@ -21,4 +21,4 @@ So far we have created rooms for the space station, added some key cards for sai
 
 **Demo 1 (10/24/2020)**
 
-So far we have one NPC, the doctor. We have also added three objects: a sword, a medkit, and a zombie hand. For the doctor we added lines, responses, and knowledge was added to only allow players to access specific conversations if they know something about the zombie hand.
+So far we have two NPCs: a doctor and a veteran. We have also added three objects: a sword, a medkit, and a zombie hand. For the doctor and veteran we added lines and responses. Knowledge was added to only allow players to access specific conversations if they know something about the zombie hand. Room descriptions were also added for some of the rooms. We moved all the keys to the common room to make testing easier.
