@@ -1,5 +1,6 @@
 Requirements Specification for SPACE Z: THE GAME
-1. Introduction
+
+1. Introduction<br />
 1.1 Purpose of Product<br />
 The game is a text based game that brings fun to the whole family. The game incorporates captivating storytelling with eye opening pictures that help bring the game’s scenes to light.<br />
 1.2 Scope of Product<br />
