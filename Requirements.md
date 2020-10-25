@@ -13,6 +13,7 @@ https://www.tads.org/t3doc/doc/t3QuickStart.htm<br />
 https://www.tads.org/t3doc/doc/gsg/index.html<br />
 https://www.tads.org/t3doc/doc/learning/Learning%20T3.pdf<br />
 <br />
+
 2. General Description of Product<br />
 This will be a text based adventure game which involves a main character (the player) traversing a space station after a mysterious outbreak has occurred. This unknown virus is making people very ill and reanimating those that have died. The player must traverse the station to find the cause of the outbreak and eventually escape. The player will be able to talk to various NPCs throughout the station and be able to add them to their party, giving certain benefits.The player will also have various encounters with the aforementioned undead victims, in which they will be able to fight or flee from them. Through the course of the game the player will also be able to obtain various items like weapons and items to help heal the player and the party. The game will end once the player’s HP drops to zero or the player escapes.<br />
 2.1 Context of Product<br />
