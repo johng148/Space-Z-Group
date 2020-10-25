@@ -1,7 +1,7 @@
 Requirements Specification for SPACE Z: THE GAME
 1. Introduction<br />
 1.1 Purpose of Product<br />
-The game is a text based game that brings fun to the whole family. The game incorporates captivating storytelling with eye opening pictures that help bring the game’s scenes to light. <br />
+The game is a text based game that brings fun to the whole family. The game incorporates captivating storytelling with eye opening pictures that help bring the game’s scenes to light.<br />
 1.2 Scope of Product<br />
 So far we have two NPCs: a doctor and a veteran. We have also added three objects: a sword, a medkit, and a zombie hand. For the doctor and veteran we added lines and responses. Knowledge was added to only allow players to access specific conversations if they know something about the zombie hand. Room descriptions were also added for some of the rooms. We moved all the keys to the common room to make testing easier. We don’t have our combat system built, we need to put more NPCs into the game to drive the storyline, and we need to create our zombies for the combat system. We also need to include hit points for the actor as well as stats that can be adjusted for the combat system. There also needs to be research and work to make the game have sound and ASCII art; these need to be done in HTML.<br />
 1.3 Acronyms, Abbreviations, Definitions<br />
