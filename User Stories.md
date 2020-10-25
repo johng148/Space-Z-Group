@@ -28,7 +28,8 @@ Acceptance Test: Ask a writer to review the storyline and get general feedback r
 4: Approachability  <br />
 As an average individual, I want a game that I feel has a comfortable level of difficulty so that I enjoy myself while I play the game. <br />
 4.1 Clear Instructions <br />
-As an average individual, I want the game to give me concise instructions, to get a good idea of how to properly play the game. <br /><br />
+As an average individual, I want the game to give me concise instructions, to get a good idea of how to properly play the game. <br />
+<br />
 Elaboration: The game should have clear instructions or a guide as to the type of instructions the system accepts so that the player does not become frustrated and drawn out of the adventure just trying to figure out commands. <br />
 Constraints: Ensure that the instructions are clear enough for the user to understand. <br />
 Effort Estimation: 2 person-hours <br />
