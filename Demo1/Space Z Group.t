@@ -1,21 +1,13 @@
 #charset "us-ascii"
 
 /*
- *   Copyright (c) 1999, 2002 by Michael J. Roberts.  Permission is
- *   granted to anyone to copy and use this file for any purpose.  
- *   
- *   This is a starter TADS 3 source file.  This is a complete TADS game
- *   that you can compile and run.
- *   
- *   To compile this game in TADS Workbench, open the "Build" menu and
- *   select "Compile for Debugging."  To run the game, after compiling it,
- *   open the "Debug" menu and select "Go."
- *   
- *   This is the "advanced" starter game - it has only the minimum set of
- *   definitions needed for a working game.  If you would like some more
- *   examples, create a new game, and choose the "introductory" version
- *   when asked for the type of starter game to create.  
- */
+ *   TADS 3 Copyright (c) 1999, 2002 by Michael J. Roberts.  Permission is
+ *   granted to anyone to copy and use this file for any purpose.
+ *
+ *   This is a starter TADS 3 source file.  This is a complete TADS game that
+ *   you can compile and run.
+ *
+ */ 
 
 /* 
  *   Include the main header for the standard TADS 3 adventure library.
@@ -36,18 +28,16 @@
  *   Our game credits and version information.  This object isn't required
  *   by the system, but our GameInfo initialization above needs this for
  *   some of its information.
- *   
- *   You'll have to customize some of the text below, as marked: the name
- *   of your game, your byline, and so on.
  */
 versionInfo: GameID
     IFID = '349b9587-c79f-4bd2-af42-e04570ad5f8b'
     name = 'Demo 1'
     byline = 'by Johnathon Garcia, Meagan Waldo, Kashka Calvin, Erik Alvarez,  Nasley Chumacero-Martin'
-    htmlByline = 'by <a href="mailto:john48@nmsu.edu, mwaldo@nmsu.edu, kashka@nmsu.edu">
+    htmlByline = 'by <a href="mailto:john48@nmsu.edu, mwaldo@nmsu.edu, kashka@nmsu.edu, nchumace@nmsu.edu">
                   Johnathon Garcia, Meagan Waldo, Kashka Calvin, Erik Alvarez,  Nasley Chumacero-Martin</a>'
     version = '1'
-    authorEmail = 'Johnathon Garcia, Meagan Waldo, Kashka Calvin, Erik Alvarez,  Nasley Chumacero-Martin <john48@nmsu.edu, mwaldo@nmsu.edu, kashka@nmsu.edu>'
+    authorEmail = 'Johnathon Garcia, Meagan Waldo, Kashka Calvin, Erik Alvarez,  Nasley Chumacero-Martin 
+        <john48@nmsu.edu, mwaldo@nmsu.edu, kashka@nmsu.edu, nchumace@nmsu.edu>'
     desc = 'DEMO 1!'
     htmlDesc = 'DEMO 1!'
 ;
@@ -64,13 +54,8 @@ gameMain: GameMainDef
     initialPlayerChar = me
 ;
 
-/* 
- *   Starting location - we'll use this as the player character's initial
- *   location.  The name of the starting location isn't important to the
- *   library, but note that it has to match up with the initial location
- *   for the player character, defined in the "me" object below.
- *   
- *   Our definition defines two strings.  The first string, which must be
+/*
+ *   ROOMS: A room definition defines two strings.  The first string, which must be
  *   in single quotes, is the "name" of the room; the name is displayed on
  *   the status line and each time the player enters the room.  The second
  *   string, which must be in double quotes, is the "description" of the
@@ -82,106 +67,163 @@ gameMain: GameMainDef
  *   name you'd prefer.  The player character's starting location is simply
  *   the location where the "me" actor is initially located.  
  */
-SleepingQuarter: Room 'Sleeping quarters'
-    "You start off in your Sleeping Quarters. "
+
+/* 
+ *   Starting location == Sleeping Quarters.
+ *   We'll use this as the player character's initial
+ *   location.  The name of the starting location isn't important to the
+ *   library, but note that it has to match up with the initial location
+ *   for the player character, defined in the "me" object below.
+ */
+
+/*
+ * ROOM: Sleeping Quarters
+ * NPC's: None
+ * Carry Objects: 
+ * Immovable Objects: 
+ */
+SleepingQuarters: Room 'Sleeping Quarters'
+    "The room is a tall elongated atrium with soothing fluorescent lighting. Everywhere
+    you look along the walls, there are sleeping pods neatly 
+    stacked like bunk beds and small chests anchored to the wall for each occupant to store
+    their personal belongings. There isn't a person in sight. To the east are the bathrooms,
+    and to the west is the Common Room. "
     east = Commondoor
     west = Bathdoor
 ;
 
-+ Bathdoor: LockableWithKey, Door 'Bath door' 'Bath door'
-    "door in Sleeping quarters to bathroom"
-    keyList = [BathKey]
-    
++ Bathdoor: LockableWithKey, Door 'bath bathroom door' 'Bathroom Door'
+    "A metal airlock door that leads to the bathroom. "
+    keyList = [BathKey] 
 ;
 
-+ Commondoor: Door 'Common door' 'Common door'
-    "door in bedroom to commonroom"
++ Commondoor: Door 'common commonroom door' 'Common Room Door'
+    "Heavy metal airlock door that leads to the Common Room. "
 ;
     
+/*
+ * ROOM: Bathroom
+ * NPC's: 
+ * Carry Objects: Security Room key
+ * Immovable Objects: 
+ */
 Bathroom: Room 'Bathroom'
-    "bathrooms and lockers for spacestation. "
-
+    "The bathroom has a long wall of lockers immediately beside the door.
+    Off to your left you can see the showers individually sealed in a compartments.
+    The toilets are along the back wall to the right, accessible only by a narrow hallway
+    that separates the lockers. "
     east = InBathdoor
 ;
 
-+ InBathdoor: LockableWithKey, Door -> Bathdoor 'Bath door' 'Bath door'
-    "door in bathroom to bedrooms"
-        keyList = [BathKey]
++ InBathdoor: LockableWithKey, Door -> Bathdoor 'bath bathroom door' 'Bathroom Door'
+    "Metal airlock door that leads from the bathroom to the Sleeping Quarters. "
+    keyList = [BathKey]
 ;
 
-CommonRoom: Room 'Common room'
-    "Room for recreational activities. "
-
+/*
+ * ROOM: Common Room
+ * NPC's: 
+ * Carry Objects:
+ * Immovable Objects:
+ */
+CommonRoom: Room 'Common Room'
+    "This a large inviting room that is filled with oversized chairs placed around the room,
+    each with its own side table. In the southeast corner you see a billiards table, and along the northeast
+    wall is another seating area equipped with panels of televisions for the crew to relax with their 
+    favorite episode. "
     north = Dockingdoor
     south = Messdoor
     west = inCommondoor
     east = Meddoor
 ;
-+ inCommondoor: Door -> Commondoor 'Common door' 'Common door'
-    "door in common to bedroom"
+
++ inCommondoor: Door -> Commondoor 'Common commonroom door' 'Common Room Door'
+    "Heavy metal airlock door that leads to the Sleeping Quarters. "
 ;
-+ Dockingdoor: Door 'Docking door' 'Docking door'
-    "door in commonroom to docking compartment"
+
++ Dockingdoor: Door 'Docking door' 'Docking Compartment door'
+    "Metal airlock door that reads \"RESTRICTED ACCESS: Authorized Personnel 
+    Only Beyond This Point\" and opens into the Docking Compartment. "
 ;
-+ Messdoor: Door 'Mess door' 'Mess door'
-    "door in commonroom to messroom"
+
++ Messdoor: Door 'mess hall messhall door' 'Mess hall Door'
+    "Set of double doors that leads into the Mess Hall."
 ;
-+ Meddoor: LockableWithKey, Door 'Med door' 'Med door'
-    "door in commonroom to medbay"
-        keyList = [MedKey]
+
++ Meddoor: LockableWithKey, Door 'Med bay medbay door' 'Med Bay Door'
+    "Metal airlock door that opens into the Med Bay. "
+    keyList = [MedKey]
 ;
+
 DockingComp: Room 'Docking Compartment'
-    "room connecting Docking Compartment and Shuttle Bay."
-    
+    "room connecting Docking Compartment and Shuttle Bay. "
     east = Shuttledoor
     south = InDockingdoor
 ;
-+ InDockingdoor: Door -> Dockingdoor 'Docking door' 'Docking door'
-    "door in docking compartment to commonroom"
+
++ InDockingdoor: Door -> Dockingdoor 'docking compartment door' 'Docking Compartment door'
+    "Metal airlock door that connects the Docoking Compartment to the Common Room.
+    The door has a sign reminding you to: \"Finish Decontamination Process Before 
+    Proceeding into Station!\" "
 ;
-+ Shuttledoor:LockableWithKey, Door 'Shuttle Bay door' 'Shuttle Bay door'
-    "door in Docking compartment to Shuttle bay."
+
++ Shuttledoor:LockableWithKey, Door 'shuttle shuttlebay door' 'Shuttle Bay Door'
+    "Restricted Access airlock door into the Shuttle Bay. "
     keyList = [ShuttleKey]
 ;
 
 ShuttleBay: Room 'Shuttle Bay'
-    "room to escape/win games"
-    
+    "This room is a large hangar where the emergency self-navigable escape shuttles are housed. You
+    have reached the final obstacle in your ardous journey. "
     west = InShuttledoor
 ;
+
 + InShuttledoor: Lockable, Door -> Shuttledoor 'Shuttle Bay door' 'Shuttle Bay door'
-    "door in Shuttle Bay to Docking compartment."
+    "Restricted Access airlock door that leads into the Docking Compartment. "
 ;
 
-
 MessHall: Room 'Mess Hall'
-    "room where everyone eats."
-    
+    "A large common room with vaulted ceilings and bright lighting. Six long tables, that seat eight 
+    people, are evenly spaced in the middle of the room. When people are seated at each table, there is
+    just enough room for one person to stand between the chairs. Along the south wall you can see the
+    long counter that is loaded with condiments and utensils at mealtimes. Along the north wall is the
+    buffet setup with covered chafing dishes. "
     west = Galleydoor
     north = InMessdoor
 ;
 
-+ InMessdoor: Door -> Messdoor 'Mess door' 'Mess door'
-    "door in messroom to commonroom"
++ InMessdoor: Door -> Messdoor 'Mess door' 'Mess Hall Door'
+    "Set of double doors that leads into the Common Room. "
 ;
 
-+ Galleydoor: Door 'Galley door' 'Galley door'
-    "door in messhall to Galley"
++ Galleydoor: Door 'galley kitchen door' 'Galley door'
+    "Door in the Mess Hall that leads into the Galley. "
 ;
 
+/*
+ * ROOM: Galley/Kitchen
+ * NPC's: Chef [To Be Added]
+ * Carry Objects: Knife [TBA], Cast-Iron Pan [TBA]
+ * Immovable Objects: Stove [TBA], Commercial Fridge [TBA], Storage Room [TBA], Cupboards [TBA]
+ */
 Galley: Room 'Galley'
-    "room with chef starting point"
-    
+    "The galley is rectangular  kitchen that could be modeled after any kitchen seen in a large 
+    restaurant on Earth. All of the counters and machinery are stainless steel. "
     east = InGalleydoor
 ;
 
 + InGalleydoor: Door -> Galleydoor 'Galley door' 'Galley door'
-    "door in Galley to messhall"
+    "A creaky swinging door from Galley into the Mess Hall. "
 ;
 
-MedBay: Room 'MedBay'
+/*
+ * ROOM: Med Bay
+ * NPC's: Doctor
+ * Carry Objects: First aid kit
+ * Immovable Objects: 
+ */
+MedBay: Room 'Med Bay'
     "room with doctor starting point"
-   
     west = InMeddoor
     south = Securitydoor
 ;
@@ -189,7 +231,6 @@ MedBay: Room 'MedBay'
 + InMeddoor: LockableWithKey, Door -> Meddoor 'Med door' 'Med door'
     "doon in medbay to Commonroom"
 ;
-
 
 + Securitydoor: LockableWithKey, Door 'Security door' 'Security door'
     "door in medbay to Security room"
@@ -200,14 +241,20 @@ MedBay: Room 'MedBay'
 + FirstAidKit: Thing 'First aid kit' 'First aid kit'
     "A first aid kit that can be used to heal most wounds."
 ;
-Securityroom: Room 'Security room'
+
+/*
+ * ROOM: Security Room/Armory(?)
+ * NPC's: Veteran
+ * Carry Objects: Sword
+ * Immovable Objects: 
+ */
+Securityroom: Room 'Security Room'
     "room with veteran in it"
-    
     north = InSecuritydoor
     east = Bridgedoor
 ;
 
-+ InSecuritydoor: Lockable,  Door -> Securitydoor 'Security door' 'Security door'
++ InSecuritydoor: Lockable,  Door -> Securitydoor 'Security door' 'Security Door'
     "Door in security room to Medbay"
 ;
 
@@ -217,20 +264,26 @@ Securityroom: Room 'Security room'
 
 //Added a sword object in the security room
 + Sword: Thing 'Sword' 'Sword'
-    "A well sharpened sword, could be useful"
+    "An antique well sharpened sword; it could be useful."
 ;
+
 Bridge: Room 'Bridge'
     "Bridge with communications tower"
-    
     west = InBridgedoor
 ;
+
 + InBridgedoor: Door -> Bridgedoor 'Bridge door' 'Bridge door'
     "door in Bridge  to Security room."
 ;
+
+/*
+ * Door keys are defined outside of the rooms and then placed inside with @.
+ * 
+ */
 SecurityKey : Key 'Security key card' 'Security key card' @Bathroom;
-MedKey : Key 'MedBay key card' 'MedBay key card' @Galley;
-ShuttleKey : Key 'Shuttle bay key card' 'Shuttle bay key card' @Bridge;
-BathKey : Key 'bathroom key card' 'bathroom key card' @MedBay;
+MedKey : Key 'MedBay key card' 'Med Bay key card' @Galley;
+ShuttleKey : Key 'Shuttle bay key card' 'Shuttle Bay key card' @Bridge;
+BathKey : Key 'bathroom key card' 'Bathroom key card' @MedBay;
 
 
 
@@ -240,7 +293,8 @@ BathKey : Key 'bathroom key card' 'bathroom key card' @MedBay;
 sample : Thing  
   name = 'sample'  // Name of the object.
   noun = 'sample' 'zombie hand'  // Nouns that the object may be known as.
-  desc = "A dismembered rotten zombie hand. Luckily it is motionless. Maybe we should take it to the doctor? He could use this as a sample."  // Description of the object.
+  desc = "A dismembered rotten zombie hand. Luckily it is motionless. 
+      Maybe we should take it to the doctor? He could use this as a sample."  // Description of the object.
   adjective = 'rotten' 'dismembered'  // Attributes that the object has.
   location = Bathroom  // Location of the object.
 ;  
@@ -253,7 +307,8 @@ doctor : Person 'doctor' 'doctor'  // Defines that this is an NPC that is a doct
   @MedBay  // Marks the location of the NPC.
   "His white coat has splatters of blood. "  // A description of the NPC.
   properName = 'Dr. Dwight Darcy'  // The NPC's name.
-  globalParamName = 'doctor'  // What this NPC is called when using the message parameter strings which looks like: {The doctor/he}.
+  globalParamName = 'doctor'  // What this NPC is called when using the message 
+                                                     //parameter strings which looks like: {The doctor/he}.
   isHim = true  // Marks the NPC as a he.
 ;
 
@@ -272,11 +327,12 @@ doctor : Person 'doctor' 'doctor'  // Defines that this is an NPC that is a doct
  *  This defines what the NPC is doing when not in conversation.
  */
 ++ doctorWorking : ConversationReadyState  // Defines what the NPC is doing when not in conversation.
-  stateDesc = "He's busily running around the MedBay grabbing medical supplies."  // Description of NPC when not in conversation.
-  specialDesc = "<<a++ ? '{The doctor/he}' : '{A doctor/he}'>> 
-  is busily running around the MedBay grabbing medical supplies." // Description of NPC when not in conversation but in a special condition.
-  isInitState = true  // Makes this state the default state of the NPC.
-  a = 0  // Used to cue the specialDesc to activate.
+    stateDesc = "He's busily running around the MedBay grabbing medical supplies."  // Description of NPC when not in conversation.
+    // Description of NPC when not in conversation but in a special condition.
+    specialDesc = "<<a++ ? '{The doctor/he}' : '{A doctor/he}'>> 
+    is busily running around the MedBay grabbing medical supplies." 
+    isInitState = true  // Makes this state the default state of the NPC.
+    a = 0  // Used to cue the specialDesc to activate.
 ;
 
 
@@ -436,7 +492,7 @@ doctor : Person 'doctor' 'doctor'  // Defines that this is an NPC that is a doct
 +++ ByeTopic
   "<q>I'm going to continue searching.</q> you say.<.p>
   <q>I can't stop you so be safe.</q> {the doctor/he} turns away and continues 
-  busily running around the MedBay grabbing medical supplies. "
+  busily running around the Med Bay grabbing medical supplies. "
 ;
 
 
@@ -446,17 +502,17 @@ doctor : Person 'doctor' 'doctor'  // Defines that this is an NPC that is a doct
  */
 +++ ImpByeTopic
   "{The doctor/he} gives you a strange look as you walk away in the middle of the conversation. 
-  He then continues busily running around the MedBay grabbing medical supplies."
+  He then continues busily running around the Med Bay grabbing medical supplies."
 ;
 
 
-//this is code for the veteran, he is in the armory
+//this is code for the veteran, he is in the security room
 veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a doctor.
   @Securityroom  // Marks the location of the NPC.
   "The veteran is a man in his forties with a beard and long hair. He seems cold and has scars along his arms.
   You get the sense that he knows how to protect himself and others around him"  // A description of the NPC.
   properName = 'Bill Mitchel'  // The NPC's name.
-  globalParamName = 'veteran'  // What this NPC is called when using the message parameter strings which looks like: {The doctor/he}.
+  globalParamName = 'veteran'  // What this NPC is called when using the message parameter strings which looks like: {The veteran/he}.
   isHim = true  // Marks the NPC as a he.
 ;
 
@@ -485,8 +541,10 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
  *  <q> places the starting quotation mark.
  *  </q> places the ending quotation mark.
  *  <.p> ends the current paragraph and makes a new line of the next one.
- *  The red single quotation mark that looks like: ' is used at the start and end of a chunk of writing to define chunks of words that will be printed out.
- *  In this case the first set is the first interaction with the NPC while the second set is what will be printed every other time you say hello.
+ *  The red single quotation mark that looks like: ' is used at the start and end of a chunk of writing to 
+ *  define chunks of words that will be printed out.
+ *  In this case the first set is the first interaction with the NPC while the second set is what will 
+ *  be printed every other time you say hello.
  */
 +++ HelloTopic, StopEventList
   [
@@ -508,7 +566,8 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
  *  <q> places the starting quotation mark.
  *  </q> places the ending quotation mark.
  *  <.p> ends the current paragraph and makes a new line of the next one.
- *  The red quotation marks that looks like: " is used at the start and end of a chunk of writing that will be printed out all at once.
+ *  The red quotation marks that looks like: " is used at the start and end of a chunk of writing that 
+ *  will be printed out all at once.  
  *  <<doctor.properName>> grabs the name of the NPC.
  *  <.convnode doctor-samples> is a conversation node that directs the conversation to the SpecialTopic.
  */
@@ -528,8 +587,9 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
 
 
 /*
- *  This is the conversation that is had when the player says walks away without saying bye to the NPC.
- *  The red quotation marks that looks like: " is used at the start and end of a chunk of writing that will be printed out all at once.
+ *  This is the conversation that is had when the player says walks away without 
+ *  saying bye to the NPC. The red quotation marks that looks like: " is used at the start 
+ *  and end of a chunk of writing that will be printed out all at once.
  */
 +++ ImpByeTopic
   "{The veteran/he} gives you a strange look as you walk away in the middle of the conversation. 
@@ -550,7 +610,7 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
  *   character, and we'll establish this one as the PC in main(), below.  
  */
 + me: Actor
-    location = SleepingQuarter
+    location = SleepingQuarters
 
 ;
 
