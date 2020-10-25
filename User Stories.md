@@ -92,7 +92,7 @@ Acceptance Test: Load and run the game successfully on a variety of platforms wi
 11: Average length of gameplay<br />
 As a parent, I want to buy a game that will last a while before my children get bored and stop playing them. The last game purchased for them was only played for 3 days and has been on the shelf since.<br />
 11.1 Attention maintenance<br />
-As a parent, I want to know that the game I buy for them will keep them busy for a long time, so that I don’t have to spend so much money on games. 
+As a parent, I want to know that the game I buy for them will keep them busy for a long time, so that I don’t have to spend so much money on games. <br />
 Elaboration: It’s important for the game to have a way to keep my kids entertained and challenged. If the game is too easy, they beat it and move on quickly, which leads them to wanting another game soon after. The game should last long enough for the purchaser to feel like they got their money’s worth. <br />
 Constraints: How long should a game last for it to be described as worth the cost of the game. The length of time varies from user to user. <br />
 Effort Estimation: 6 person-hours<br />
