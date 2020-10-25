@@ -18,7 +18,9 @@ This will be a text based adventure game which involves a main character (the pl
 2.1 Context of Product<br />
 The game uses the TADS IDE, but can be exported to an HTML format for browser use. <br />
 2.2 Domain Model with Description<br />
+
 ![Domain Model](https://github.com/johng148/Space-Z-Group/blob/master/Demo1/Graphics/Domain%20Model.PNG)
+
 <br />
 The model shows how everything is connected to each other. The player is able to go to each of the rooms, and rooms can have an NPC, an item, and or a keycard; some rooms have none. There could also be zombies in each of the rooms. The player and the zombies would be engaged in combat whenever there is an encounter. The model also shows that the player does not interact with an NPC until the player encounters him/her in a specific room; then direct interaction occurs. <br />
 2.3 Product Functions (general)<br />
