@@ -280,10 +280,10 @@ Bridge: Room 'Bridge'
  * Door keys are defined outside of the rooms and then placed inside with @.
  * 
  */
-SecurityKey : Key 'Security key card' 'Security key card' @Bathroom;
-MedKey : Key 'MedBay key card' 'Med Bay key card' @Galley;
-ShuttleKey : Key 'Shuttle bay key card' 'Shuttle Bay key card' @Bridge;
-BathKey : Key 'bathroom key card' 'Bathroom key card' @MedBay;
+SecurityKey : Key 'Security key card' 'Security key card' @CommonRoom;
+MedKey : Key 'MedBay key card' 'Med Bay key card' @CommonRoom;
+ShuttleKey : Key 'Shuttle bay key card' 'Shuttle Bay key card' @CommonRoom;
+BathKey : Key 'bathroom key card' 'Bathroom key card' @CommonRoom;
 
 
 
