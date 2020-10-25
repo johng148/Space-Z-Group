@@ -31,6 +31,7 @@ The assumption is that the user will have an operating system installed on their
  <br />
 3. Functional Requirements<br />
 https://github.com/johng148/Space-Z-Group/blob/master/User%20Stories.md <br />
+<br />
 4. System and Non-functional Requirements<br />
 4.1 External Interface Requirements (User,Hardware,Software,Communications)<br />
 NF.4.1.1 Sound interface: The user needs to have speakers of some kind in order for sound to be played<br />
