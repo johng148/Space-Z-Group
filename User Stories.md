@@ -42,6 +42,7 @@ Elaboration: The game should provide some aspect that makes it stand out to its 
 Constraints: The sheer number of zombie stories that exist can cause our game to seem clichéd. <br />
 Effort Estimation: 72 person-hours <br />
 Acceptance Test: Research other text-based games to see if anyone has already published zombie adventures and play the game to see how similar or how unique the storyline is. <br />
+<br />
 6: Marketability <br />
 As a video game digital distribution service, I expect a game that is marketable to many different customers so that we can have multiple distributions of the game. <br />
 6.1 Wider Audience Appeal <br />
