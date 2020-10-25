@@ -8,10 +8,10 @@ So far we have two NPCs: a doctor and a veteran. We have also added three object
 <br />TADS - Text Adventures Development System
 <br />IF - Interactive Fiction: These are text-based adventure games that may or not include graphics and sounds. The action is driven by a storyline and choices through text input from the player.
 <br />1.4 References
-https://www.tads.org/
-https://www.tads.org/t3doc/doc/t3QuickStart.htm
-https://www.tads.org/t3doc/doc/gsg/index.html
-https://www.tads.org/t3doc/doc/learning/Learning%20T3.pdf
+https://www.tads.org/<br />
+https://www.tads.org/t3doc/doc/t3QuickStart.htm<br />
+https://www.tads.org/t3doc/doc/gsg/index.html<br />
+https://www.tads.org/t3doc/doc/learning/Learning%20T3.pdf<br />
 
 2. General Description of Product<br />
 This will be a text based adventure game which involves a main character (the player) traversing a space station after a mysterious outbreak has occurred. This unknown virus is making people very ill and reanimating those that have died. The player must traverse the station to find the cause of the outbreak and eventually escape. The player will be able to talk to various NPCs throughout the station and be able to add them to their party, giving certain benefits.The player will also have various encounters with the aforementioned undead victims, in which they will be able to fight or flee from them. Through the course of the game the player will also be able to obtain various items like weapons and items to help heal the player and the party. The game will end once the player’s HP drops to zero or the player escapes.<br />
