@@ -72,8 +72,8 @@ src win split:Space Z Group.t:S:0:0.000000
 proj search:collapse spaces:I:0
 search:exact case:I:0
 mdi win list::S:0:Space Z Group.t
-mdi win list::S:1:%tads%lib\adv3\adv3.tl
-mdi win list::S:2::help
+mdi win list::S:1::help
+mdi win list::S:2:%tads%lib\adv3\adv3.tl
 build:webpage dir:S:0:web
 main win pos::R:953,0,1927,1047
 build:srczipfile:S:0:Space Z GroupSource.zip
@@ -111,7 +111,7 @@ build:include_files:S:16:adv3.h
 build:include_files:S:17:strcomp.h
 build:include_files:S:18:en_us.h
 src win selrange:Space Z Group.t:S:0:0,0
-src win selrange:Space Z Group.t:S:1:20040,20040
+src win selrange:Space Z Group.t:S:1:18770,18770
 SearchToolbar:rebarVis:I:1
 MenuBar:rebarNewLine:I:0
 proj search:regex:I:0
@@ -137,7 +137,7 @@ search dlg:old search opts:S:4:
 search:regex:I:0
 src win selrange:%tads%lib\adv3\actor.t:S:0:0,0
 src win selrange:%tads%lib\adv3\actor.t:S:1:325974,325974
-mdi tab order::S:0:0,1,2
+mdi tab order::S:0:0,2,1
 build:rlsgam:S:0:Space Z Group.t3
 EditToolbar:rebarVis:I:1
 main win mdi max::I:1
@@ -148,8 +148,8 @@ src win edit mode:%tads%lib\adv3\actor.t:S:0:TADS 3
 line wrap:%tads%lib\adv3\adv3.tl:S:0:N
 MenuBar:rebarIndex:I:0
 mdi win title::S:0:Space Z Group.t
-mdi win title::S:1:%tads%lib\adv3\adv3.tl
-mdi win title::S:2:
+mdi win title::S:1:
+mdi win title::S:2:%tads%lib\adv3\adv3.tl
 search:dir:I:-1
 build:installer prog:S:0:Space Z Group_Setup.exe
 MenuBar:rebarWidth:I:-1
