@@ -10,8 +10,8 @@ src win edit mode:%tads%lib\system.tl:S:0:TADS 3 Library
 build:c ops:I:0
 line wrap:Space Z Group.t:S:0:N
 SearchToolbar:rebarNewLine:I:0
-log win vis::I:1
-log win pos::R:172,124,1534,799
+log win vis::I:0
+log win pos::R:-31828,-31955,-30738,-31555
 MenuBar:rebarVis:I:1
 line wrap:%tads%lib\adv3\actor.t:S:0:N
 DocToolbar:rebarIndex:I:3
@@ -53,7 +53,7 @@ auto-script:quit sequences:S:1:<nocase>[<]line[>]<space>*y.*
 src win split:%tads%lib\adv3\adv3.tl:S:0:0.000000
 SearchToolbar:rebarIndex:I:2
 search:wrap:I:1
-auto-script:next-id:I:52
+auto-script:next-id:I:53
 SearchToolbar:rebarWidth:I:281
 docking config::S:0:CL
 docking config::S:1:W0,170,270,2,495,302,645,D,L,project win
@@ -71,23 +71,22 @@ locals win:pos:R:10,526,294,637
 main win max::I:1
 proj search:collapse spaces:I:0
 search:exact case:I:0
-mdi win list::S:0::log
-mdi win list::S:1:Space Z Group.t
-mdi win list::S:2::help
-mdi win list::S:3:%tads%lib\adv3\adv3.tl
+mdi win list::S:0:Space Z Group.t
+mdi win list::S:1::help
+mdi win list::S:2:%tads%lib\adv3\adv3.tl
 build:webpage dir:S:0:web
 main win pos::R:-8,-8,1544,832
 build:srczipfile:S:0:Space Z GroupSource.zip
 proj search:whole word:I:0
-help win pos::R:206,181,1296,561
+help win pos::R:-31802,-31929,-30712,-31549
 help win vis::I:1
 build:ignore case:I:0
 build:exe:S:0:Space Z Group.exe
 docsearch win vis::I:0
 src win selrange:%tads%lib\adv3\adv3.tl:S:0:0,0
 src win selrange:%tads%lib\adv3\adv3.tl:S:1:0,0
-script win:pos:R:2,669,163,799
-script win:vis:I:1
+script win:pos:R:183,526,337,637
+script win:vis:I:0
 build:use charmap:I:0
 EditToolbar:rebarIndex:I:1
 hist win vis::I:0
@@ -136,11 +135,11 @@ search dlg:old search opts:S:3:
 search dlg:old search opts:S:4:
 search dlg:old search opts:S:5:
 src win selrange:Space Z Group.t:S:0:0,0
-src win selrange:Space Z Group.t:S:1:7432,7432
+src win selrange:Space Z Group.t:S:1:10033,10033
 search:regex:I:0
 src win selrange:%tads%lib\adv3\actor.t:S:0:0,0
 src win selrange:%tads%lib\adv3\actor.t:S:1:325974,325974
-mdi tab order::S:0:1,3,2,0
+mdi tab order::S:0:0,2,1
 build:rlsgam:S:0:Space Z Group.t3
 EditToolbar:rebarVis:I:1
 main win mdi max::I:1
@@ -151,17 +150,16 @@ DocToolbar:rebarNewLine:I:0
 src win edit mode:%tads%lib\adv3\actor.t:S:0:TADS 3
 line wrap:%tads%lib\adv3\adv3.tl:S:0:N
 MenuBar:rebarIndex:I:0
-mdi win title::S:0:
-mdi win title::S:1:Space Z Group.t
-mdi win title::S:2:
-mdi win title::S:3:%tads%lib\adv3\adv3.tl
+mdi win title::S:0:Space Z Group.t
+mdi win title::S:1:
+mdi win title::S:2:%tads%lib\adv3\adv3.tl
 search:dir:I:1
 build:installer prog:S:0:Space Z Group_Setup.exe
 MenuBar:rebarWidth:I:-1
-project win:pos:R:2,121,163,643
+project win:pos:R:-32006,-31989,-31845,-31170
 project win:vis:I:1
 auto-script:dir:S:0:Scripts
-stack win pos::R:206,181,1296,561
+stack win pos::R:-31802,-31929,-30712,-31549
 filesearch win vis::I:0
 stack win vis::I:0
 DebugToolbar:rebarIndex:I:4

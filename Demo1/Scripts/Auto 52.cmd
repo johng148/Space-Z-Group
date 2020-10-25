@@ -1,2 +1,3 @@
 <eventscript>
 <line>e
+<eof>
