@@ -17,7 +17,7 @@ We chose Pipe-and-Filter based architecture, because we have many paths that a p
 
 
 
-
+![Domain Model](https://github.com/johng148/Space-Z-Group/blob/master/Demo1/Graphics/Our%20Architecture.PNG)
 
 
 
