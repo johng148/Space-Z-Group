@@ -10,7 +10,7 @@ Architectural Style Information:<br/>
 Pipe-and-Filter is an architectural style that has components called filters and pipes which are connectors that transmit the data from one filter to another without modifying it. In this architecture style, these components (filters) are reusable, because each receives an input, transforms the data or performs an action, then has an output. One of its key advantages is that these filters can be introduced, replaced and removed without modifying other parts of the system. Each filter parses the given input first before performing its action.
 <br/>
 <br/>
-Architectural Style Choice:
+Architectural Style Choice:<br/>
 We chose Pipe-and-Filter based architecture, because we have many paths that a player can choose from, so the filters (events) will definitely be useful. These filters can simply be added, removed or replaced and don’t require us to modify other parts of our system. 
 <br/>
 <br/>
