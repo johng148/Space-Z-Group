@@ -620,7 +620,7 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
     healAmount=1
     regenHP()
  
-    {
+    { // regenHP
         if(CurHP<MaxHP)
         {
             CurHP +=healAmount;
@@ -633,7 +633,17 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
              "You are already fully healed.";
         }
            
+    }// end regenHP
+    
+    damageHP () {
+        CurHP --;
+        "Ouch! That hurt";
+        if (CurHP == 0){
+            "You're out of HP!";
+            finishGameMsg(ftDeath, []);
+        }
     }
+    
 ;
 
      DefineIAction(heal)
@@ -649,4 +659,16 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
     verbPhrase = 'heal/healing'
 ;
 
+    DefineIAction(damage)
+    execAction() {
+        MyHP.damageHP ();
+    }
+;
 
+    VerbRule (damage)
+    'damage' | 'hploss'
+    :damageAction
+    verbPhrase = 'damage/hploss'
+;
+    
+    

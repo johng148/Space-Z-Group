@@ -1,0 +1,10 @@
+<eventscript>
+<line>damage
+<line>heal
+<line>heal
+<line>heal
+<line>heal
+<line>damage
+<line>damage
+<line>damage
+<line>damage
