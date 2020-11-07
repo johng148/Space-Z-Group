@@ -614,7 +614,7 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
 
 ;
 +MyHP: Component 'my hp/health/life/hitpoints'
-    desc="Current Health: <<CurrentHP>>/<<MaxHP>>"
+    desc="Current Health: <<CurHP>>/<<MaxHP>>"
     MaxHP =5
     CurHP =1
     healAmount=1
@@ -625,12 +625,14 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
         {
             CurHP +=healAmount;
             "you feel a bit better";
+            "Current Health: <<CurHP>>/<<MaxHP>>";
         }
         
             else
         {
                 CurHP=MaxHP;
              "You are already fully healed.";
+             "Current Health: <<CurHP>>/<<MaxHP>>";
         }
            
     }// end regenHP
@@ -640,8 +642,10 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
         "Ouch! That hurt ";
         if (CurHP == 0){
             "You're out of HP!";
-            finishGameMsg(ftDeath, []);
+               finishGameMsg(ftDeath, []);
         }
+        "Current Health: <<CurHP>>/<<MaxHP>>";
+         
     }
     
 ;
@@ -651,8 +655,8 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
 {
     if(FirstAidKit.location == me){
     MyHP.regenHP();
-        FirstAidKit.location = nil;
-        FirstAidKit.isListedInInventory = false;
+    FirstAidKit.location = nil;
+    FirstAidKit.isListedInInventory = false;
     }
 }
 ;
@@ -665,7 +669,9 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
 
     DefineIAction(damage)
     execAction() {
-        MyHP.damageHP ();
+    if(cactus.location == me){
+     MyHP.damageHP ();
+    }
     }
 ;
 
@@ -675,4 +681,10 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
     verbPhrase = 'damage/hploss'
 ;
     
-    
+ cactus : Thing  
+  name = 'Cactus'  // Name of the object.
+  noun = 'Cactus' // Nouns that the object may be known as.
+  desc = "A green cactus. It looks sharp."  // Description of the object.
+  adjective = 'green' 'sharp'  // Attributes that the object has.
+  location = SleepingQuarters  // Location of the object.
+;     
