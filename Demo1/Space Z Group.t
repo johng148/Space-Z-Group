@@ -613,5 +613,40 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
     location = SleepingQuarters
 
 ;
++MyHP: Component 'my hp/health/life/hitpoints'
+    desc="Current Health: <<CurrentHP>>/<<MaxHP>>"
+    MaxHP =5
+    CurHP =1
+    healAmount=1
+    regenHP()
+ 
+    {
+        if(CurHP<MaxHP)
+        {
+            CurHP +=healAmount;
+            "you feel a bit better";
+        }
+        
+            else
+        {
+                CurHP=MaxHP;
+             "You are already fully healed.";
+        }
+           
+    }
+;
+
+     DefineIAction(heal)
+    execAction()
+{
+    MyHP.regenHP();
+}
+;
+
+    VerbRule(regen)
+    'heal' | 'healing' 
+    :healAction
+    verbPhrase = 'heal/healing'
+;
 
 

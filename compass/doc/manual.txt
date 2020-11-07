@@ -1,0 +1,123 @@
+/* ---------------------------------------------------------------------- */
+/*
+ *   TADS 3 Compass Extension.
+ *   Version 3.
+ *   By Steve Breslin (steve.breslin@gmail.com)
+ *      Krister Fundin (fundin@yahoo.com)
+ */
+
+/* ---------------------------------------------------------------------- */
+/*
+ *   Introduction.
+ */
+
+   In text-based games with large maps and many exits from each location, it
+can be difficult for players to keep track of their whereabouts, and having
+to carefully re-read all the room descriptions just to make sure that we
+haven't missed yet another exit can be a bother. To remedy this, TADS 3 can
+optionally display a list of obvious exits in the status line. Another
+popular way of making navigation easier is to display a compass rose
+somewhere on the screen, where, if there is an exit to the east, for
+instance, the compass rose would light up in that direction. Besides just
+conveying this list of exits in an intuitive way, the compass also provides
+a visual distinction to the various rooms on the map, since many of them
+will have their own unique constellations of lit and unlit directions.
+
+   This extension provides such a compass for use in TADS 3 games and
+stories. A command to turn the compass on and off is also included, since
+not all players are likely to need it, and since it might take up some of
+the space that would otherwise have been used by the main window.
+
+/* ---------------------------------------------------------------------- */
+/*
+ *   Basic usage.
+ */
+
+   To make use of this extension, we add the library file "compass.tl" to
+our project. After recompiling, a compass rose should show up to the right
+of the status line. If everything seems fine, then that is all that needs to
+be done. There are some things that we might want to configure, though, and
+this is what the rest of the manual will be about.
+
+/* ---------------------------------------------------------------------- */
+/*
+ *   Placement of the compass.
+ */
+
+   By default, the compass rose will be placed in its own banner to the
+right of the status line. If no additional banners are used, then this is
+pretty much the only place where it can sensibly be located, but we may want
+to consider a different placement if we have a more complex arrangement of
+banners.
+
+   To relocate the compass, we can modify the compassBanner object and
+change one or more of the following properties: parent, where, other, align
+and style. These all mean the same thing as the corresponding arguments to
+the createBanner() intrinsic function. By default, parent is set to
+statuslineBanner and align is set to BannerAlignRight.
+
+/* ---------------------------------------------------------------------- */
+/*
+ *   HTML and text-only rendering.
+ */
+
+   In order to work with as many TADS 3 interpreters as possible, this
+extension provides two different ways of drawing the compass. There is a
+graphic version suitable for multimedia interpreters and an ASCII version
+for the rest. The graphic version will be used wherever possible. On some
+interpreters, even the text version might not supported, in which the
+compass will simply be omitted.
+
+   The HTML and text-only compass writers have their own source files, and
+both of them are actually optional. If, for instance, a story already
+requires a multimedia interpreter for other reasons, then the text-only
+compass would never be used in practice, and so it would do no harm to
+remove the "compass_text.t" file completely.
+
+/* ---------------------------------------------------------------------- */
+/*
+ *   Configuring the HTML compass.
+ */
+
+   The most obvious thing to change about the HTML compass would be the
+images that make up the compass rose. There are nine of them, and they are
+stored in PNG format in the "compassres" sub-directory of this extension.
+When replacing or modifying these images, it may be best to make a local
+copy of the entire extension in the directory where the source files of the
+story are located, since it's not possible to both use a common copy of the
+extension and have different sets of images for different stories, should
+this become necessary in the future.
+
+   The size of the images is also configurable. By default they will be
+scaled to a width and height of 11 or 28 pixels. (To be precise, the images
+in the middle column have a width of 11 pixels and the images in the other
+columns have a width of 28 pixels. The images in the middle row have a
+height of 11 pixels and the images in the other rows have a height of 28
+pixels. Thus, the corner images are all 28 x 28 pixels, the centre image is
+11 x 11 pixels, and the rest have one long and one short side.)
+
+   These sizes can be changed by modifying htmlCompass and overriding
+flankSize (which defaults to 28) and middleSize (which defaults to 11). When
+using the default images, the ratio between these should stay roughly the
+same.
+
+/* ---------------------------------------------------------------------- */
+/*
+ *   Exit listing in the status line.
+ */
+
+   Needless to say, the list of exits which is by default displayed in the
+status line becomes a bit superfluous next to a compass rose. It may
+therefore be a good idea to override exitLister.showStatuslineExits() and
+exitLister.getStatuslineExitsHeight() in order to remove this list. (Another
+approach would be to override exitsMode.inStatusLine and change the factory
+default to nil, but the player might previously have used the SAVE DEFAULTS
+command, in which case the factory default would never be applied.)
+
+   One might also think that it would be a good idea to only disable the
+exit listing if the interpreter is actually capable of displaying a compass
+(which we can tell by checking if compassBanner.compassWriter is nil), but
+in practice, an interpreter that can't even display the text-only compass
+likely doesn't support banners at all and thus couldn't display the exit
+listing either way.
+

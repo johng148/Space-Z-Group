@@ -1,0 +1,40 @@
+/* ---------------------------------------------------------------------- */
+/*
+ *   Version 1.
+ */
+
+   Initial release.
+
+/* ---------------------------------------------------------------------- */
+/*
+ *   Version 2.
+ */
+
+   Added pluggable compass writers. Apart from the previous HTML compass, a
+text-only compass is now included, which will be used on interpreters where
+the HTML compass cannot be displayed. The extension should also be able to
+cope with interpreters that can't display any compass at all.
+
+   The placement of the compass banner has been made more configurable.
+
+   The default HTML compass is now only a third as large as it used to be,
+and is placed to the right of the status line.
+
+   Moved the English-specific definitions to a separate file.
+
+/* ---------------------------------------------------------------------- */
+/*
+ *   Version 3.
+ */
+
+   The COMPASS ON/OFF action is now a system action, which means that it
+consumes no game time and can't be directed to other actors.
+
+   The third (bottom) line of the text-only compass would disappear if there
+were no southerly exits. This has been corrected.
+
+   The tests used to determine which compass writers are supported by the
+interpreter are now done more properly.
+
+   A useless thumbnail file was removed from the archive.
+
