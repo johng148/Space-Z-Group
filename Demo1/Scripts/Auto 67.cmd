@@ -1,0 +1,3 @@
+<eventscript>
+<line>damage
+<eof>

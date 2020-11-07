@@ -637,7 +637,7 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
     
     damageHP () {
         CurHP --;
-        "Ouch! That hurt";
+        "Ouch! That hurt ";
         if (CurHP == 0){
             "You're out of HP!";
             finishGameMsg(ftDeath, []);
@@ -649,7 +649,11 @@ veteran : Person 'veteran' 'veteran'  // Defines that this is an NPC that is a d
      DefineIAction(heal)
     execAction()
 {
+    if(FirstAidKit.location == me){
     MyHP.regenHP();
+        FirstAidKit.location = nil;
+        FirstAidKit.isListedInInventory = false;
+    }
 }
 ;
 

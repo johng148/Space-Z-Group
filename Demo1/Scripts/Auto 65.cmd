@@ -1,1 +1,2 @@
 <eventscript>
+<eof>

@@ -4,5 +4,7 @@
 <line>heal
 <line>heal
 <line>heal
-<line>heal
+<line>restore
+<file>
+<line>restart
 <eof>

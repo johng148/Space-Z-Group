@@ -1,0 +1,3 @@
+<eventscript>
+<line>heal
+<eof>
