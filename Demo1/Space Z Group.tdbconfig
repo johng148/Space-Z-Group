@@ -103,7 +103,7 @@ docking config::S:8:W-1,170,170,26,26,1132,445,M,R,help win
 src win split:Space Z Group.t:S:0:0.000000
 locals win:pos:R:10,526,294,637
 locals win:vis:I:0
-main win max::I:1
+main win max::I:0
 src win selrange:Rooms\ShuttleBay.t:S:0:0,0
 src win selrange:Rooms\ShuttleBay.t:S:1:144,144
 src win selrange:Rooms\CommonRoom.t:S:0:0,0
@@ -146,7 +146,7 @@ src win selrange:SleepingQuarters.t:S:0:0,0
 src win selrange:SleepingQuarters.t:S:1:375,375
 hist win vis::I:0
 src win selrange:Space Z Group.t:S:0:0,0
-src win selrange:Space Z Group.t:S:1:5540,5540
+src win selrange:Space Z Group.t:S:1:1617,1617
 src win split:Rooms\Bridge.t:S:0:0.000000
 src win pos:Space Z Group.t:R:26,26,1486,651
 src win split:Rooms\DockingComp.t:S:0:0.000000

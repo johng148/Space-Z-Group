@@ -27,15 +27,15 @@
  */
 versionInfo: GameID
     IFID = '349b9587-c79f-4bd2-af42-e04570ad5f8b'
-    name = 'Demo 1'
+    name = 'SPACE Z: THE GAME'
     byline = 'by Johnathon Garcia, Meagan Waldo, Kashka Calvin, Erik Alvarez,  Nasley Chumacero-Martin'
     htmlByline = 'by <a href="mailto:john48@nmsu.edu, mwaldo@nmsu.edu, kashka@nmsu.edu, nchumace@nmsu.edu">
                   Johnathon Garcia, Meagan Waldo, Kashka Calvin, Erik Alvarez,  Nasley Chumacero-Martin</a>'
     version = '1'
     authorEmail = 'Johnathon Garcia, Meagan Waldo, Kashka Calvin, Erik Alvarez,  Nasley Chumacero-Martin 
         <john48@nmsu.edu, mwaldo@nmsu.edu, kashka@nmsu.edu, nchumace@nmsu.edu>'
-    desc = 'DEMO 1!'
-    htmlDesc = 'DEMO 1!'
+    desc = 'SPACE Z: THE GAME'
+    htmlDesc = 'SPACE Z: THE GAME'
 ;
 
 /*
