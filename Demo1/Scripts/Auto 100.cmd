@@ -1,5 +1,4 @@
 <eventscript>
-<line>heal
-<line>pick up cactus
+<line>take cactus
 <line>damage
 <eof>

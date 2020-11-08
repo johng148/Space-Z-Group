@@ -1,17 +1,21 @@
 <eventscript>
-<line>take cactus
-<line>damage
-<line>restart
+<line>e
 <line>take all
 <line>w
-<line>e
 <line>take all
+<line>e
 <line>e
 <line>unlock
-<line>MedBay key card
-<line>r
+<line>MedBay card
+<line>w
 <line>e
+<line>e
+<line>take tall
 <line>take all
+<line>i
 <line>heal
+<line>i
+<line>damage
+<line>i
 <line>damage
 <eof>

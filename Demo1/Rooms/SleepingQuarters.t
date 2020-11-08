@@ -45,6 +45,9 @@ SleepingQuarters: Room 'Sleeping Quarters'
     "Heavy metal airlock door that leads to the Common Room. "
 ;
 
+/*
+ *  This object is a green cactus.
+ */
 cactus : Thing  
   name = 'Cactus'  // Name of the object.
   noun = 'Cactus' // Nouns that the object may be known as.

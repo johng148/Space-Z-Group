@@ -1,6 +1,4 @@
 <eventscript>
-<line>e
-<line>damage
-<line>w
+<line>take all
 <line>damage
 <eof>

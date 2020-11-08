@@ -1,21 +1,21 @@
 <eventscript>
-<line>heal
-<line>w
-<line>e
-<line>e
-<line>w
+<line>take cacus
+<line>take all
+<line>damage
+<line>r
+<file>
+<line>restart
 <line>take all
 <line>w
-<line>take all
 <line>e
 <line>take all
 <line>e
 <line>unlock
-<line>MedBay key card
+<line>MedBay card
 <line>e
 <line>take all
-<line>i
 <line>heal
 <line>i
-<line>heal
+<line>damage
+<line>damage
 <eof>

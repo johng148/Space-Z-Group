@@ -76,73 +76,97 @@ BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
  */
 + me: Actor
     location = SleepingQuarters
-
 ;
+
+
+
+/*
+ *  This is our componnt that controls HP.
+ */
 +MyHP: Component 'my hp/health/life/hitpoints'
-    desc="Current Health: <<CurHP>>/<<MaxHP>>"
-    MaxHP =5
-    CurHP =1
-    healAmount=1
-    regenHP()
- 
-    { // regenHP
-        if(CurHP<MaxHP)
-        {
-            CurHP +=healAmount;
+    desc="Current Health: <<CurHP>>/<<MaxHP>>"  // Command that shows current health out of max amount.
+    MaxHP = 5  // Max amount of HP player can have.
+    CurHP = 1  // Current amount of HP player has.
+    healAmount = 1 // Amount of HP for the player that is healed each healing.
+    
+    // This method controls health regen.
+    regenHP() { 
+        // If the current health is less then the max health increase health. 
+        if(CurHP < MaxHP) {
+            CurHP += healAmount;
+            
             "You feel a bit better.";
             "Current Health: <<CurHP>>/<<MaxHP>>";
-        }
-        
-            else
-        {
-                CurHP=MaxHP;
-             "You are already fully healed.";
-             "Current Health: <<CurHP>>/<<MaxHP>>";
-        }
-           
+        } // end of if
+        else {
+            CurHP=MaxHP;
+            
+            "You are already fully healed.";        
+            "Current Health: <<CurHP>>/<<MaxHP>>";
+        } // end of else        
     }// end regenHP
     
+    // This method controls health damage.
     damageHP () {
         CurHP --;
+       
         "Ouch! That hurt.";
-        if (CurHP == 0){
+       
+        // If the current health is 0 the player is dead.
+        if(CurHP == 0){
             "You're out of HP!";
-               finishGameMsg(ftDeath, []);
-        }
-        "Current Health: <<CurHP>>/<<MaxHP>>";
-         
-    }
-    
+            finishGameMsg(ftDeath, []);
+        } // end of if
+       
+        "Current Health: <<CurHP>>/<<MaxHP>>"; 
+    } // end of damageHP  
 ;
 
-     DefineIAction(heal)
-    execAction()
-{
-    if(FirstAidKit.location == me){
-    MyHP.regenHP();
-    FirstAidKit.location = nil;
-    FirstAidKit.isListedInInventory = false;
-    }
-}
+
+
+/*
+ *  This defines an action that the player can use in specific conditions.
+ */
+DefineIAction(heal) execAction() {
+        // If the player has the firstaid kit then they may use it to regen HP.    
+        if(FirstAidKit.location == me){
+            MyHP.regenHP();
+            FirstAidKit.location = nil; // removes the firstaid kit after use.
+            FirstAidKit.isListedInInventory = nil; // removes the firstaid kit after use.    
+        } // end of if
+    } // end of DefineIAction for heal
 ;
 
-    VerbRule(regen)
-    'heal' | 'healing' 
-    :healAction
+
+
+/*
+ *  This gives verb rules to an action.
+ */
+VerbRule(regen)
+    'heal' | 'healing' : healAction
     verbPhrase = 'heal/healing'
 ;
 
-    DefineIAction(damage)
-    execAction() {
-    if(cactus.location == me){
-     MyHP.damageHP ();
-    }
-    }
+
+
+/*
+ *  This defines an action that the player can use in specific conditions.
+ */
+DefineIAction(damage) execAction() {  
+    // If the player has the cactus then they may use it to damage their HP.    
+    if(cactus.location == me){   
+        MyHP.damageHP ();  
+    } // end of if 
+}// end of DefineIAction for damage
 ;
 
-    VerbRule (damage)
-    'damage' | 'hploss'
-    :damageAction
+
+
+
+/*
+ *  This gives verb rules to an action.
+ */
+VerbRule (damage)
+    'damage' | 'hploss' : damageAction
     verbPhrase = 'damage/hploss'
 ;
- 
