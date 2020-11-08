@@ -18,6 +18,18 @@
 -lib system
 -lib adv3/adv3
 -source "Space Z Group"
+-source Rooms/SleepingQuarters
+-source Rooms/CommonRoom
+-source Rooms/Bathroom
+-source Rooms/DockingComp
+-source Rooms/ShuttleBay
+-source Rooms/MessHall
+-source Rooms/Galley
+-source Rooms/MedBay
+-source Rooms/SecurityRoom
+-source Rooms/Bridge
+-source NPCs/Doctor
+-source NPCs/Veteran
 
 -res
 GameInfo.txt

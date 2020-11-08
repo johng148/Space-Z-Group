@@ -1,3 +1,2 @@
 <eventscript>
-<line>damage
 <eof>

@@ -6,7 +6,7 @@ AuthorEmail: Johnathon Garcia, Meagan Waldo, Kashka Calvin, Erik Alvarez,  Nasle
 Desc: DEMO 1!
 HtmlDesc: DEMO 1!
 Version: 1
-ReleaseDate: 2020-11-07
+ReleaseDate: 2020-11-08
 Language: en-US
 LicenseType: Freeware
 CopyingRules: Nominal cost only; compilations allowed
