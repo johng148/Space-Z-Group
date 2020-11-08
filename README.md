@@ -22,3 +22,14 @@ So far we have created rooms for the space station, added some key cards for sai
 **Demo 1 (10/24/2020)**
 
 So far we have two NPCs: a doctor and a veteran. We have also added three objects: a sword, a medkit, and a zombie hand. For the doctor and veteran we added lines and responses. Knowledge was added to only allow players to access specific conversations if they know something about the zombie hand. Room descriptions were also added for some of the rooms. We moved all the keys to the common room to make testing easier.
+
+**Demo 2 (11/8/2020)**
+The updates for this Demo version are as follows: We have broken up the source code into separate directories. Also, we have begun to implement combat system by adding functions to increase and decrease health, an object that heals (first aid kit), as well as a base object that deals damage and can kill the player ending the game. The game is directly playable on a Windows computer by downloading the executable: https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.exe
+
+For MAC users, the player has to download and install the appropriate interpreter for their system: https://www.tads.org/tads3.htm# (either QTads or CocoaTADS).
+For Unix/Linux users, the player has to download and install either QTads or FrobTads. FrobTads is a console text-only interpreter: https://www.tads.org/tads3.htm#.
+For support in downloading and installing the QTads interpreter refer to https://realnc.github.io/qtads/old_index.html#Download.
+Once QTads (or CocoaTADS) has been installed, the player can download the zipped game file from: https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.zip.
+
+
+
