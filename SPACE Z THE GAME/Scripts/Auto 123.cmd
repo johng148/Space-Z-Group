@@ -1,2 +1,2 @@
 <eventscript>
-<eof>
+<line>heal

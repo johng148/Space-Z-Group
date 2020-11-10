@@ -55,8 +55,8 @@ gameMain: GameMainDef
  * Door keys are defined outside of the rooms and then placed inside with @.
  */
 SecurityKey : Key 'Security key/card' 'Security key card' @CommonRoom;
-MedKey : Key 'Medbay med bay key/card' 'Med Bay key card' @CommonRoom;
-ShuttleKey : Key 'Shuttle bay key/card' 'Shuttle Bay key card' @CommonRoom;
+MedKey : Key 'Medbay key/card' 'Med Bay key card' @CommonRoom;
+ShuttleKey : Key 'Shuttlebay key/card' 'Shuttle Bay key card' @CommonRoom;
 BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
 
 
@@ -86,23 +86,34 @@ BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
 +MyHP: Component 'my hp/health/life/hitpoints'
     desc="Current Health: <<CurHP>>/<<MaxHP>>"  // Command that shows current health out of max amount.
     MaxHP = 5  // Max amount of HP player can have.
-    CurHP = 1  // Current amount of HP player has.
+    CurHP = 3  // Current amount of HP player has.
     healAmount = 1 // Amount of HP for the player that is healed each healing.
+    FAidUses=3 // uses of med kit
     
     // This method controls health regen.
     regenHP() { 
         // If the current health is less then the max health increase health. 
         if(CurHP < MaxHP) {
             CurHP += healAmount;
+            FAidUses--; // decrement uses of first aid kit
             
-            "You feel a bit better.";
-            "Current Health: <<CurHP>>/<<MaxHP>>";
+            "You feel a bit better! ";
+            "Current Health: <<CurHP>>/<<MaxHP>> ";
+            "First aid uses left: <<FAidUses>> ";
+            
+            if(FAidUses == 0) { // check to see if we ran out of uses.
+                "You have ran out of first aid kit uses! ";
+                 FirstAidKit.location = nil; // removes the firstaid kit after use.
+            FirstAidKit.isListedInInventory = nil; // removes the firstaid kit after use.
+                FAidUses=3;
+                
+            }// end nested if for uses          
         } // end of if
         else {
             CurHP=MaxHP;
             
-            "You are already fully healed.";        
-            "Current Health: <<CurHP>>/<<MaxHP>>";
+            "You are already fully healed. ";        
+            "Current Health: <<CurHP>>/<<MaxHP>> ";
         } // end of else        
     }// end regenHP
     
@@ -131,9 +142,9 @@ DefineIAction(heal) execAction() {
         // If the player has the firstaid kit then they may use it to regen HP.    
         if(FirstAidKit.location == me){
             MyHP.regenHP();
-            FirstAidKit.location = nil; // removes the firstaid kit after use.
-            FirstAidKit.isListedInInventory = nil; // removes the firstaid kit after use.    
-        } // end of if
+             } // end of if
+    else
+        "You need a First aid kit to heal. ";
     } // end of DefineIAction for heal
 ;
 
