@@ -1,0 +1,14 @@
+<eventscript>
+<line>jjjjj
+<line>nnnnknk
+<line>
+<line>
+<line>
+<line>
+<line>
+<line>
+<line>
+<line>
+<line>west
+<line>e
+<eof>

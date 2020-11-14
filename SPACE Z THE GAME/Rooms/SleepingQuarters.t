@@ -51,7 +51,7 @@ SleepingQuarters: Room 'Sleeping Quarters'
 cactus : Thing  
   name = 'Cactus'  // Name of the object.
   noun = 'Cactus' // Nouns that the object may be known as.
-  desc = "A green cactus. It looks sharp."  // Description of the object.
+  desc = "The potted plant is small green cactus. The needles look sharp."  // Description of the object.
   adjective = 'green' 'sharp'  // Attributes that the object has.
   location = SleepingQuarters  // Location of the object.
 ;     

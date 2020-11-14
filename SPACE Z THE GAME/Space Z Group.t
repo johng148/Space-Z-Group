@@ -55,8 +55,8 @@ gameMain: GameMainDef
  * Door keys are defined outside of the rooms and then placed inside with @.
  */
 SecurityKey : Key 'Security key/card' 'Security key card' @CommonRoom;
-MedKey : Key 'Medbay key/card' 'Med Bay key card' @CommonRoom;
-ShuttleKey : Key 'Shuttlebay key/card' 'Shuttle Bay key card' @CommonRoom;
+MedKey : Key 'Medbay key/med bay key/card' 'Med Bay key card' @CommonRoom;
+ShuttleKey : Key 'Shuttlebay key/shuttle bay key/card' 'Shuttle Bay key card' @CommonRoom;
 BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
 
 
@@ -81,7 +81,7 @@ BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
 
 
 /*
- *  This is our componnt that controls HP.
+ *  This is our component that controls HP.
  */
 +MyHP: Component 'my hp/health/life/hitpoints'
     desc="Current Health: <<CurHP>>/<<MaxHP>>"  // Command that shows current health out of max amount.
