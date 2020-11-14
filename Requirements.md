@@ -53,7 +53,7 @@ NF.4.4.2 Game Time: The users expect the game to be able to run a long time with
 NF.4.5.1 No other requirements are needed.<br />
 <br />
 5. Appendices<br />
-Space-Z-Group Domain Model:https://github.com/johng148/Space-Z-Group/blob/master/Demo1/Graphics/Domain%20Model.PNG <br />
+Space-Z-Group Domain Model:https://github.com/johng148/Space-Z-Group/blob/master/SPACE%20Z%20THE%20GAME/Graphics/Domain%20Model.PNG <br />
 To download the TADS Interpreter: https://www.tads.org/tads3.htm <br />
 A platform for archives and distribution of Interactive Fiction Games: http://www.ifarchive.org/ <br />
 <br />
