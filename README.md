@@ -16,6 +16,7 @@ https://www.tads.org/
 **Current Progress:**
 
 **Demo 2 (11/8/2020)**
+
 The updates for this Demo version are as follows: We have broken up the source code into separate directories. Also, we have begun to implement combat system by adding functions to increase and decrease health, an object that heals (first aid kit), as well as a base object that deals damage and can kill the player ending the game. The game is directly playable on a Windows computer by downloading the executable: https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.exe
 
 For MAC users, the player has to download and install the appropriate interpreter for their system: https://www.tads.org/tads3.htm# (either QTads or CocoaTADS).
