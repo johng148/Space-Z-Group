@@ -1,3 +1,4 @@
 <eventscript>
 <line>attack zombie
-<eof>
+<line>look
+<line>attack

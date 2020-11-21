@@ -1,4 +1,3 @@
 <eventscript>
-<line>attack Zombie
+<line>attack
 <line>attack zombie
-<eof>

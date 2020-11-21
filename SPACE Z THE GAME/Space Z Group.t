@@ -257,9 +257,11 @@ Zombie : Thing
     // Glitch we may need to fix in the future for TADS3 built in attack. Would tell player they could not attack zombie but now it just says it does not understand command.
     dobjFor(Attack){
          
-      verify() { 
-            illogical(''); 
-        } // end of verify
-   
- } // end of dobjFor for Take
+      action() { 
+           if(Zombie.location == me.location){   
+        ZombieHP.damageZombieHP ();  
+               
+    } // end of if 
+        } // end of action
+    } // end of dobjFor for Attack
 ; 
