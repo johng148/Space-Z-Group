@@ -181,3 +181,85 @@ VerbRule (damage)
     'damage' | 'hploss' : damageAction
     verbPhrase = 'damage/hploss'
 ;
+
+
+
+
+
+/*
+ *  This defines an action that the player can use in specific conditions.
+ */
+DefineIAction(attack) execAction() {  
+    // If the player is in the same location as the zombie then they may attack it.    
+    if(Zombie.location == me.location){   
+        ZombieHP.damageZombieHP ();  
+    } // end of if 
+}// end of DefineIAction for attack
+;
+
+
+
+/*
+ *  This gives verb rules to an action.
+ */
+VerbRule (attack)
+    'attack' | 'attack zombie' : attackAction
+    verbPhrase = 'attack/attack zombie'
+;
+
+
+/*
+ *  This is our component that controls HP of the Zombie.
+ */
++ZombieHP: Component 'Zombie hp/health/life/hitpoints'
+    desc="Current Health: <<ZombieCurHP>>/<<ZombieMaxHP>>"  // Command that shows current health out of max amount.
+    ZombieMaxHP = 5  // Max amount of HP zombie can have.
+    ZombieCurHP = 3  // Current amount of HP zombie has.
+ 
+   // This method controls health damage.
+    damageZombieHP () {
+             
+        ZombieCurHP --;
+       
+        "Grrrr.";
+       
+        // If the current health is 0 the zombie is dead.
+        if(ZombieCurHP == 0){
+            "You killed the Zombie!";
+        Zombie.location = nil; // removes the zombie from the room.
+        Zombie.isListed = nil; // removes the zombie from the room list.
+        } // end of if
+     
+    } // end of ZombieHP     
+;
+
+
+
+/*
+ *  This object is a zombie.
+ */
+Zombie : Thing  
+  name = 'Zombie'  // Name of the object.
+  noun = 'Zombie' // Nouns that the object may be known as.
+  desc = "A rotting zombie."  // Description of the object.
+  adjective = 'green' 'rotting'  // Attributes that the object has.
+  location = SleepingQuarters  // Location of the object.
+      
+    // If the player trys to take the zombie it will not let them.
+    dobjFor(Take){
+         
+      verify() { 
+            illogical('');   
+      } // end of verify
+ 
+ } // end of dobjFor for Take
+    
+    // Glitch we may need to fix in the future for TADS3 built in attack. Would tell player they could not attack zombie but now it just says it does not understand command.
+    dobjFor(Attack){
+         
+      verify() { 
+            illogical(''); 
+        } // end of verify
+   
+ } // end of dobjFor for Take
+; 
