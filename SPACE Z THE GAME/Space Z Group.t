@@ -48,7 +48,16 @@ versionInfo: GameID
 gameMain: GameMainDef
     /* the initial player character is 'me' */
     initialPlayerChar = me
+ 
+    // Gives a title to the game and states what actions a player has.
+    showIntro(){
+        "SPACE Z: THE GAME<.p>Key actions you have:<.p>Attack ~ Can be used to attack a zombie.<.p>
+        Heal ~ Can be used to heal yourself when you have a medkit.<.p>";
+    }
 ;
+
+
+
 
 
 /*
@@ -86,7 +95,7 @@ BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
 +MyHP: Component 'my hp/health/life/hitpoints'
     desc="Current Health: <<CurHP>>/<<MaxHP>>"  // Command that shows current health out of max amount.
     MaxHP = 5  // Max amount of HP player can have.
-    CurHP = 3  // Current amount of HP player has.
+    CurHP = 5  // Current amount of HP player has.
     healAmount = 1 // Amount of HP for the player that is healed each healing.
     FAidUses=3 // uses of med kit
     
@@ -120,7 +129,7 @@ BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
     // This method controls health damage.
     damageHP () {
         CurHP --;
-       
+        
         "Ouch! That hurt.";
        
         // If the current health is 0 the player is dead.
@@ -130,6 +139,9 @@ BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
         } // end of if
        
         "Current Health: <<CurHP>>/<<MaxHP>>"; 
+        
+           
+        
     } // end of damageHP  
 ;
 
@@ -221,15 +233,29 @@ VerbRule (attack)
              
         ZombieCurHP --;
        
-        "Grrrr.";
-       
+        "Grrrr.<.p>";
+        
         // If the current health is 0 the zombie is dead.
         if(ZombieCurHP == 0){
             "You killed the Zombie!";
         Zombie.location = nil; // removes the zombie from the room.
         Zombie.isListed = nil; // removes the zombie from the room list.
         } // end of if
-     
+        
+        // If the Zombie is not dead and it was attacked it will attack back.
+        if(ZombieCurHP != 0){
+            "The zombie trys to bite at you...";
+            
+            // If the Zombie has a health that is even it will successfully attack the player. Else it misses.
+            if(ZombieCurHP % 2){
+                MyHP.damageHP (); 
+            } // end of if
+            else{
+             "it missed...";
+            } // end of else
+        } // end of if
+  
+        
     } // end of ZombieHP     
 ;
 
@@ -254,14 +280,15 @@ Zombie : Thing
  
  } // end of dobjFor for Take
     
-    // Glitch we may need to fix in the future for TADS3 built in attack. Would tell player they could not attack zombie but now it just says it does not understand command.
+    // If the player trys to attack the zombie it will let them.
     dobjFor(Attack){
          
       action() { 
-           if(Zombie.location == me.location){   
-        ZombieHP.damageZombieHP ();  
-               
-    } // end of if 
+            
+            // If the Zombie and the player are in the same location the attack can occur.
+            if(Zombie.location == me.location){   
+                ZombieHP.damageZombieHP ();   
+            } // end of if 
         } // end of action
     } // end of dobjFor for Attack
 ; 

@@ -3,7 +3,8 @@
 <line>attack
 <line>attack
 <line>attack
-<line>look
+<line>restore
+<file>
 <line>undo
 <line>undo
 <line>undo
@@ -13,8 +14,6 @@
 <line>undo
 <line>undo
 <line>undo
-<line>undo
-<line>undo
-<line>undo
-<line>undo
-<line>attack Zombie
+<line>attack zombie
+<line>attack zomibie
+<eof>

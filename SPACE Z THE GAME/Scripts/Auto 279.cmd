@@ -2,4 +2,7 @@
 <line>attack
 <line>attack
 <line>attack
-<line>look
+<line>attack
+<line>attack
+<line>attack
+<eof>

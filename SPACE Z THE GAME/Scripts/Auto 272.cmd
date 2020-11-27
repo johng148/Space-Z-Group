@@ -1,0 +1,24 @@
+<eventscript>
+<line>attack
+<line>attack
+<line>attack
+<line>attack
+<line>attack
+<line>attack
+<line>undo
+<line>undo
+<line>undo
+<line>undo
+<line>undo
+<line>undo
+<line>undo
+<line>undo
+<line>undo
+<line>undo
+<line>undo
+<line>undo
+<line>undo
+<line>undo
+<line>attack
+<line>take cactus
+<eof>
