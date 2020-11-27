@@ -1,0 +1,2 @@
+<eventscript>
+<line>attack zombie

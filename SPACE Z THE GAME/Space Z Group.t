@@ -210,7 +210,6 @@ DefineIAction(attack) execAction() {
 ;
 
 
-
 /*
  *  This gives verb rules to an action.
  */
@@ -226,28 +225,36 @@ VerbRule (attack)
 +ZombieHP: Component 'Zombie hp/health/life/hitpoints'
     desc="Current Health: <<ZombieCurHP>>/<<ZombieMaxHP>>"  // Command that shows current health out of max amount.
     ZombieMaxHP = 5  // Max amount of HP zombie can have.
-    ZombieCurHP = 3  // Current amount of HP zombie has.
+    ZombieCurHP = 4  // Current amount of HP zombie has.
  
    // This method controls health damage.
     damageZombieHP () {
-             
-        ZombieCurHP --;
-       
+        
+        //the sword does 5 damage
+        if(testSword.location == me){
+            ZombieCurHP -= 2;
+        }//if user has a sword
+        
+        //if the user doesnt have a sword
+        else{
+            ZombieCurHP--;// = ZombieCurHP - i;
+        }//else
         "Grrrr.<.p>";
         
         // If the current health is 0 the zombie is dead.
-        if(ZombieCurHP == 0){
+        if(ZombieCurHP <= 0){
             "You killed the Zombie!";
         Zombie.location = nil; // removes the zombie from the room.
         Zombie.isListed = nil; // removes the zombie from the room list.
         } // end of if
         
         // If the Zombie is not dead and it was attacked it will attack back.
-        if(ZombieCurHP != 0){
+        if(ZombieCurHP > 0){
             "The zombie trys to bite at you...";
-            
+           // "<<ZombieCurHP>>\n";
             // If the Zombie has a health that is even it will successfully attack the player. Else it misses.
-            if(ZombieCurHP % 2){
+            x = rand(10);
+            if(x % 2 == 0){
                 MyHP.damageHP (); 
             } // end of if
             else{
@@ -287,7 +294,7 @@ Zombie : Thing
             
             // If the Zombie and the player are in the same location the attack can occur.
             if(Zombie.location == me.location){   
-                ZombieHP.damageZombieHP ();   
+                ZombieHP.damageZombieHP();   
             } // end of if 
         } // end of action
     } // end of dobjFor for Attack

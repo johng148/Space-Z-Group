@@ -34,6 +34,7 @@ SleepingQuarters: Room 'Sleeping Quarters'
     and to the west is the Common Room. "
     east = Commondoor
     west = Bathdoor
+    
 ;
 
 + Bathdoor: LockableWithKey, Door 'bath bathroom door' 'Bathroom Door'
