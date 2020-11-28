@@ -40,7 +40,7 @@ As a reviewer, I want a game that stands out among other text based games that I
 As a reviewer, I want a game that provides the user with something unique so that I can provide a comprehensive review that covers aspects of a game that I have never reviewed before. <br />
 Elaboration: The game should provide some aspect that makes it stand out to its users among the other many text based games that exist. <br />
 Constraints: The sheer number of zombie stories that exist can cause our game to seem clichéd. <br />
-Effort Estimation: 1 person-hours <br />
+Effort Estimation: 1 person-hour <br />
 Acceptance Test: Research other text-based games to see if anyone has already published zombie adventures and play the game to see how similar or how unique the storyline is. <br />
 <br />
 6: Marketability <br />
