@@ -1,2 +1,2 @@
 <eventscript>
-<line>attack
+<eof>
