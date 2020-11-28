@@ -7,3 +7,5 @@
 # Configuration file #
 *.tbdconfig
 
+# Debugging file #
+Space Z Group_dbg.t3
