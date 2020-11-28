@@ -82,7 +82,7 @@ gameMain: GameMainDef
  * Door keys are defined outside of the rooms and then placed inside with @.
  */
 SecurityKey : Key 'Security key/card' 'Security key card' @CommonRoom;
-MedKey : Key 'Medbay key/med bay key/card' 'Med Bay key card' @CommonRoom;
+MedKey : Key 'Medbay key/card' 'MedBay key card' @CommonRoom;
 ShuttleKey : Key 'Shuttlebay key/shuttle bay key/card' 'Shuttle Bay key card' @CommonRoom;
 BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
 
@@ -214,9 +214,17 @@ VerbRule (damage)
  *  This defines an action that the player can use in specific conditions.
  */
 DefineIAction(attack) execAction() {  
-    // If the player is in the same location as the zombie then they may attack it.    
+    // If the player is in the same location as the zombie then they may attack it at 50% chance to hit.
     if(Zombie.location == me.location){   
+        "You attempt to attack the zombie! ";
+         x = rand(100);
+        if(x >=50){
+        "You hit the zombie! ";
         ZombieHP.damageZombieHP ();  
+        }// end of x rand if
+        else{
+            "You missed the zombie... ";
+        }//end else
     } // end of if 
 }// end of DefineIAction for attack
 ;
@@ -266,8 +274,8 @@ VerbRule (attack)
             "The zombie tries to bite you...";
            // "<<ZombieCurHP>>\n";
             // If the Zombie has a health that is even it will successfully attack the player. Else it misses.
-            x = rand(10);
-            if(x % 2 == 0){
+            x = rand(100);
+            if(x >=50){
                 MyHP.damageHP (); 
             } // end of if
             else{

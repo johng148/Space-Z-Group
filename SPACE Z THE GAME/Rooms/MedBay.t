@@ -8,7 +8,7 @@
  * Carry Objects: First aid kit
  * Immovable Objects: 
  */
-MedBay: Room 'Med Bay'
+MedBay: Room 'MedBay'
     "room with doctor starting point"
     west = InMeddoor
     south = Securitydoor

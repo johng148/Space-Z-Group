@@ -32,7 +32,7 @@ CommonRoom: Room 'Common Room'
     "Set of double doors that leads into the Mess Hall."
 ;
 
-+ Meddoor: LockableWithKey, Door 'Med bay medbay door' 'Med Bay Door'
++ Meddoor: LockableWithKey, Door 'Medbay door' 'MedBay Door'
     "Metal airlock door that opens into the Med Bay. "
     keyList = [MedKey]
 ;
