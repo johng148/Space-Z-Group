@@ -30,6 +30,8 @@
 -source Rooms/Bridge
 -source NPCs/Doctor
 -source NPCs/Veteran
+-lib HPBanner/hpdisplaybanner
+-lib compass/compass
 
 -res
 GameInfo.txt
