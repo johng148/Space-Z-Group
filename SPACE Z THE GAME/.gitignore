@@ -1,2 +1,9 @@
-
+# Ignore auto-generated Scripts#
 /Scripts/
+
+#Ignore Debug files #
+/debug/
+
+# Configuration file #
+*.tbdconfig
+
