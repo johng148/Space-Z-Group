@@ -36,7 +36,3 @@ CommonRoom: Room 'Common Room'
     "Metal airlock door that opens into the Med Bay. "
     keyList = [MedKey]
 ;
-+ testSword: Thing 'testSword' 'testSword'
-    "A well sharpened antique sword; it could be useful."
-    swordDamage = 2;
-;

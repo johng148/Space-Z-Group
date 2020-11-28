@@ -34,7 +34,6 @@ SleepingQuarters: Room 'Sleeping Quarters'
     and to the west is the Common Room. "
     east = Commondoor
     west = Bathdoor
-    
 ;
 
 + Bathdoor: LockableWithKey, Door 'bath bathroom door' 'Bathroom Door'
@@ -56,4 +55,3 @@ cactus : Thing
   adjective = 'green' 'sharp'  // Attributes that the object has.
   location = SleepingQuarters  // Location of the object.
 ;     
-    

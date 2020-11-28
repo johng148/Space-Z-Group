@@ -1,2 +1,3 @@
 <eventscript>
+<line>test
 <eof>
