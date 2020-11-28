@@ -52,12 +52,9 @@ gameMain: GameMainDef
     // Gives a title to the game and states what actions a player has.
     showIntro(){
         "SPACE Z: THE GAME<.p>Key actions you have:<.p>Attack ~ Can be used to attack a zombie.<.p>
-        Heal ~ Can be used to heal yourself when you have a medkit.<.p>";
+        Heal ~ Can be used to heal yourself when you have a first aid kit.<.p>";
     }
 ;
-
-
-
 
 
 /*
@@ -67,7 +64,6 @@ SecurityKey : Key 'Security key/card' 'Security key card' @CommonRoom;
 MedKey : Key 'Medbay key/med bay key/card' 'Med Bay key card' @CommonRoom;
 ShuttleKey : Key 'Shuttlebay key/shuttle bay key/card' 'Shuttle Bay key card' @CommonRoom;
 BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
-
 
 
 /*
@@ -86,7 +82,6 @@ BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
 + me: Actor
     location = SleepingQuarters
 ;
-
 
 
 /*
@@ -108,10 +103,10 @@ BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
             
             "You feel a bit better! ";
             "Current Health: <<CurHP>>/<<MaxHP>> ";
-            "First aid uses left: <<FAidUses>> ";
+            "First aid kit uses left: <<FAidUses>> ";
             
             if(FAidUses == 0) { // check to see if we ran out of uses.
-                "You have ran out of first aid kit uses! ";
+                "Your first aid kit is empty! You cannot use it anymore! ";
                  FirstAidKit.location = nil; // removes the firstaid kit after use.
             FirstAidKit.isListedInInventory = nil; // removes the firstaid kit after use.
                 FAidUses=3;
@@ -140,11 +135,8 @@ BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
        
         "Current Health: <<CurHP>>/<<MaxHP>>"; 
         
-           
-        
     } // end of damageHP  
 ;
-
 
 
 /*
@@ -156,10 +148,9 @@ DefineIAction(heal) execAction() {
             MyHP.regenHP();
              } // end of if
     else
-        "You need a First aid kit to heal. ";
+        "You need a first aid kit to heal. ";
     } // end of DefineIAction for heal
 ;
-
 
 
 /*
@@ -169,7 +160,6 @@ VerbRule(regen)
     'heal' | 'healing' : healAction
     verbPhrase = 'heal/healing'
 ;
-
 
 
 /*
@@ -184,8 +174,6 @@ DefineIAction(damage) execAction() {
 ;
 
 
-
-
 /*
  *  This gives verb rules to an action.
  */
@@ -193,9 +181,6 @@ VerbRule (damage)
     'damage' | 'hploss' : damageAction
     verbPhrase = 'damage/hploss'
 ;
-
-
-
 
 
 /*
@@ -229,6 +214,7 @@ VerbRule (attack)
  
    // This method controls health damage.
     damageZombieHP () {
+        local x;
         
         //the sword does 5 damage
         if(testSword.location == me){
@@ -243,14 +229,14 @@ VerbRule (attack)
         
         // If the current health is 0 the zombie is dead.
         if(ZombieCurHP <= 0){
-            "You killed the Zombie!";
+            "You killed the zombie!";
         Zombie.location = nil; // removes the zombie from the room.
         Zombie.isListed = nil; // removes the zombie from the room list.
         } // end of if
         
         // If the Zombie is not dead and it was attacked it will attack back.
         if(ZombieCurHP > 0){
-            "The zombie trys to bite at you...";
+            "The zombie tries to bite you...";
            // "<<ZombieCurHP>>\n";
             // If the Zombie has a health that is even it will successfully attack the player. Else it misses.
             x = rand(10);
@@ -258,11 +244,10 @@ VerbRule (attack)
                 MyHP.damageHP (); 
             } // end of if
             else{
-             "it missed...";
+             "It missed...";
             } // end of else
         } // end of if
   
-        
     } // end of ZombieHP     
 ;
 
@@ -282,7 +267,7 @@ Zombie : Thing
     dobjFor(Take){
          
       verify() { 
-            illogical('');   
+            illogical('It is extremely dangerous to try to pick up a zombie. What if it bites you?');   
       } // end of verify
  
  } // end of dobjFor for Take
