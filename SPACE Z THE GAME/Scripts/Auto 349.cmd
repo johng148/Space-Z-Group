@@ -1,1 +1,2 @@
 <eventscript>
+<line>attack

@@ -23,30 +23,30 @@ hitpointsBanner: CustomBannerWindow {
      *   argument to BannerWindow.showBanner()
      */
     bannerArgs = [nil, BannerAfter, statuslineBanner, BannerTypeText, 
-        BannerAlignTop, 5,BannerSizeAbsolute, BannerStyleBorder]
-    currentContents = '<img src="hpgraphics/hp5.png">'
+        BannerAlignTop, 4, BannerSizeAbsolute, BannerStyleBorder]
+    currentContents = '<img src="hpgraphics/hp5.png" >'
 ;
-
-//    promptDaemon = static new PromptDaemon(self, &showHitpoints);
               
-    showHitpoints()  {
+    showHitpoints(CurHP)  {
         clearWindow();
-        local currenthp;
-        currenthp = gPlayerChar.CurHP;
-        
-    if (currenthp == 5)  {
+
+     /*
+      *   Calling updateContents() changes what the banner displays. It contains
+      *   2 arguments but the 2nd argument is optional.
+      */
+    if (CurHP == 5)  {
         hitpointsBanner.updateContents('<img src="hpgraphics/hp5.png">');
     }               
-    else if (currenthp ==4)  {
+    else if (CurHP ==4)  {
         hitpointsBanner.updateContents('<img src="hpgraphics/hp4.png">');
     }   
-     else if (currenthp ==3)  {
+     else if (CurHP ==3)  {
         hitpointsBanner.updateContents('<img src="hpgraphics/hp3.png">');
     }   
-     else if (currenthp ==2)  {
+     else if (CurHP ==2)  {
         hitpointsBanner.updateContents('<img src="hpgraphics/hp2.png">');
     }   
-     else if (currenthp ==1)  {
+     else if (CurHP ==1)  {
         hitpointsBanner.updateContents('<img src="hpgraphics/hp1.png">');
     }   
     } 

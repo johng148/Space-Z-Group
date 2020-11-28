@@ -91,7 +91,7 @@ BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
     desc="Current Health: <<CurHP>>/<<MaxHP>>"  // Command that shows current health out of max amount.
     MaxHP = 5  // Max amount of HP player can have.
     CurHP = 5  // Current amount of HP player has.
-    healAmount = 1 // Amount of HP for the player that is healed each healing.
+    healAmount = 1 // Amount of HP for the player that is healed each time.
     FAidUses=3 // uses of med kit
     
     // This method controls health regen.
@@ -100,6 +100,8 @@ BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
         if(CurHP < MaxHP) {
             CurHP += healAmount;
             FAidUses--; // decrement uses of first aid kit
+            //This command is used to update the hitpoints display.
+            hitpointsBanner.showHitpoints(CurHP);
             
             "You feel a bit better! ";
             "Current Health: <<CurHP>>/<<MaxHP>> ";
@@ -107,14 +109,16 @@ BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
             
             if(FAidUses == 0) { // check to see if we ran out of uses.
                 "Your first aid kit is empty! You cannot use it anymore! ";
-                 FirstAidKit.location = nil; // removes the firstaid kit after use.
-            FirstAidKit.isListedInInventory = nil; // removes the firstaid kit after use.
+                FirstAidKit.location = nil; // removes the firstaid kit after use.
+                FirstAidKit.isListedInInventory = nil; // removes the firstaid kit after use.
                 FAidUses=3;
                 
             }// end nested if for uses          
         } // end of if
         else {
             CurHP=MaxHP;
+            //This command is used to update the hitpoints display.
+            hitpointsBanner.showHitpoints(CurHP);
             
             "You are already fully healed. ";        
             "Current Health: <<CurHP>>/<<MaxHP>> ";
@@ -124,6 +128,8 @@ BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
     // This method controls health damage.
     damageHP () {
         CurHP --;
+        //This command is used to update the hitpoints display.
+         hitpointsBanner.showHitpoints(CurHP);
         
         "Ouch! That hurt.";
        

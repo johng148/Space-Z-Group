@@ -1,0 +1,9 @@
+<eventscript>
+<line>attack
+<line>attack
+<line>attack
+<line>attack
+<line>
+<line>
+<line>grr
+<eof>
