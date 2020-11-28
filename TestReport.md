@@ -10,34 +10,34 @@ We tested the whole game every time something major was added such as combat and
 
 1: Core features that need to be present........Accepted As Implemented
 A game was saved and successfully reloaded and continued from the save point. 
-<br>
+<br><br>
 2: Replayability…………………….............Accepted As Implemented
 A random number generator was implemented for player damage so that a zombie can kill the player at any point. The random number generator will create a different scenario each time the game is played.
-<br>
+<br><br>
 3: Captivating storyline…….…………........Not Accepted As Implemented
 Storyboard was produced. Due to a lack of NPCs and story depth this was not accepted.
-<br>
+<br><br>
 4: Approachability …………………............Accepted As Implemented
 A novice on text-based games was asked to play the game and navigate the controls. He found that it was playable with specific hints and command instructions.
-<br>
+<br><br>
 5: Individuality……………………..............Accepted as Implemented
 To test the individuality of our story, we searched for similar games on the Interactive Fiction Archives which publishes games for TADS and similar systems https://www.ifarchive.org/indexes/if-archive/games/tads/. We found 5 games that were potentially similar to ours, but found that none have the same storyline: zombies in space. Others just had similar space themes, such fas 2044: Space Troopers by Angus R. McLaren, or they focused on combat such as Space Shooter: A TADS 3 Abuse by Kristin Fundin. 
-<br>
+<br><br>
 6: Marketability….........................................Not Accepted As Implemented
 Sources were found but a need for variety in statistical data is why this was not accepted.
-<br>
+<br><br>
 7: Money Maker………………………...….Not Accepted As Implemented
 Since the game is not completed and our research on marketability needs to be expanded this was not accepted.
-<br>
+<br><br>
 8: Age Appropriateness……….….................Not Accepted As Implemented
 The storyline is not yet complete, so it has not been fully tested with a broader audience of all ages. The storyline and addition of zombies will likely drive the age appropriateness to a teen or adult.
-<br>
+<br><br>
 9: Representation………………………..…..Not Accepted As Implemented
 So far all of the NPCs that have been added are male. We need to add at least one strong female character that will balance the gender base and appeal to more players.
-<br>
+<br><br>
 10: Platform Diversity………………............Accepted As Implemented
 The game can be played on multiple computer platforms such as Windows, Linux, Unix, and Mac. We created game files usable on each of these platforms starting with Demo 2.
-<br>
+<br><br>
 11: Average length of gameplay………..…...Not Accepted As Implemented
 Since we have not completed the game and the storyboard needs work this is not accepted.
-<br>
+<br><br>
