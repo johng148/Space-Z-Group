@@ -321,10 +321,19 @@ Zombie : Thing
          
       action() { 
             
-            // If the Zombie and the player are in the same location the attack can occur.
+            
             if(Zombie.location == me.location){   
-                ZombieHP.damageZombieHP();   
-            } // end of if 
+        "You attempt to attack the zombie! ";
+         x = rand(100);
+        if(x >=50){
+        "You hit the zombie! ";
+        ZombieHP.damageZombieHP ();  
+        }// end of x rand if
+        else{
+            "You missed the zombie... ";
+        }//end else
+    } // end of if 
+            
         } // end of action
     } // end of dobjFor for Attack
 ; 
