@@ -38,27 +38,6 @@ versionInfo: GameID
     htmlDesc = 'SPACE Z: THE GAME'
 ;
 
-
-//Zombie calss
-//Class name: ZombieClass
-//Inherits from "Thing" class
-//Has properites "ZombieHealth" and "ZombieCurrHP" as well as method "getHP"
-class ZombieClass : Thing
-    
-    ZombieHealth = 5 //Zombie max health
-    ZombieCurrHP = 5 //Zombie current health
-    
-    //Accessor for ZombieHealth property
-    getHP () {
-        "Current Health: <<ZombieCurrHP>>";
-        
-    }
-      
-;
-
-
-
-
 /*
  *   The "gameMain" object lets us set the initial player character and
  *   control the game's startup procedure.  Every game must define this

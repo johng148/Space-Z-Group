@@ -1,6 +1,22 @@
 #charset "us-ascii"
 #include <adv3.h>
 #include <en_us.h>
+//Zombie calss
+//Class name: ZombieClass
+//Inherits from "Thing" class
+//Has properites "ZombieHealth" and "ZombieCurrHP" as well as method "getHP"
+class ZombieClass : Thing
+    
+    ZombieHealth = 5 //Zombie max health
+    ZombieCurrHP = 5 //Zombie current health
+    
+    //Accessor for ZombieHealth property
+    getHP () {
+        "Current Health: <<ZombieCurrHP>>";
+        
+    }
+      
+;
 //Test code for Zombie class
 //Makes a test object called "Zombie2"
 Zombie2 : ZombieClass
@@ -21,7 +37,7 @@ Zombie : Thing
   desc = "A rotting zombie."  // Description of the object.
   adjective = 'green' 'rotting'  // Attributes that the object has.
   location = SleepingQuarters  // Location of the object.
-      
+   
     // If the player trys to take the zombie it will not let them.
     dobjFor(Take){
          
@@ -46,6 +62,7 @@ Zombie : Thing
         }// end of x rand if
         else{
             "You missed the zombie... ";
+                    
         }//end else
     } // end of if 
             
@@ -90,12 +107,30 @@ Zombie : Thing
             // If the Zombie has a health that is even it will successfully attack the player. Else it misses.
             x = rand(100);
             if(x >=50){
+                "It bit you! ";
                 MyHP.damageHP (); 
             } // end of if
             else{
              "It missed...";
             } // end of else
         } // end of if
+        
+         if(MedKey.location == me && Zombie.location == nil) { // zombie respawn
+            Zombie.location = me.location;
+            Zombie.isListed = true;
+            ZombieCurHP = 5;
+    "A wild zombie has appeared and is trying to bite you! ";
+           // "<<ZombieCurHP>>\n";
+            // If the Zombie has a health that is even it will successfully attack the player. Else it misses.
+            x = rand(100);
+            if(x >=50){
+                "It bit you! ";
+                MyHP.damageHP (); 
+            } // end of if
+            else{
+             "It missed...";
+            } // end of else
+    }// end medbay location if
   
     } // end of ZombieHP     
 ;
