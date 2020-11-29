@@ -32,6 +32,8 @@
 -source NPCs/Veteran
 -lib HPBanner/hpdisplaybanner
 -lib compass/compass
+-source hints/hints
+-source "Zombies/Zombie class"
 
 -res
 GameInfo.txt
