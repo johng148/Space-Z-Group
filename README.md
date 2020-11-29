@@ -15,6 +15,11 @@ https://www.tads.org/
 
 **Current Progress:**
 
+**Demo 3 (11/29/2020)**
+
+In this demo, we have included a zombie class that defines a zombie as a Thing. Also, the storyline now includes specific hints when in a certain room, or when the player is carrying a specific item. In terms of combat implementation, the player can attack the zombie and the zombie also attacks the player and may or may not inflict damage. We also included a test sword that damages the zombie. The player is presented with a key in the beginning of the game that provides game specific commands. Also, another improvement to the game is the addition of a hit points counter. The player can see how many hit points they have at all times. A compass was also added into the banner and gives the player a visual regarding what exits are available in each room.
+
+
 **Demo 2 (11/8/2020)**
 
 The updates for this Demo version are as follows: We have broken up the source code into separate directories. Also, we have begun to implement combat system by adding functions to increase and decrease health, an object that heals (first aid kit), as well as a base object that deals damage and can kill the player ending the game. The game is directly playable on a Windows computer by downloading the executable: https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.exe
