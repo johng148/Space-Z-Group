@@ -191,7 +191,7 @@ VerbRule (damage)
 
 /*
  *  This defines an action that the player can use in specific conditions.
- */
+ 
 DefineIAction(attack) execAction() {  
     // If the player is in the same location as the zombie then they may attack it at 50% chance to hit.
     if(Zombie.location == me.location){   
@@ -199,7 +199,7 @@ DefineIAction(attack) execAction() {
          x = rand(100);
         if(x >=50){
         "You hit the zombie! ";
-        ZombieHP.damageZombieHP ();  
+        ZombieClass.damageZombieHP ();  
         }// end of x rand if
         else{
             "You missed the zombie... ";
@@ -211,13 +211,13 @@ DefineIAction(attack) execAction() {
 
 /*
  *  This gives verb rules to an action.
- */
+
 VerbRule (attack)
     'attack' | 'attack zombie' : attackAction
     verbPhrase = 'attack/attack zombie'
 ;
 
-
+*/
 
 
 
