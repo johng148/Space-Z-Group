@@ -15,6 +15,23 @@ https://www.tads.org/
 
 **Current Progress:**
 
+**Demo 4 (12/6/2020)**
+This is the final demo to be presented in class. In this version, we have finished the combat implementation so that the Zombie class creates a generic zombie type that can be implemented with different characteristics, such as different hit points and different descriptions. We have also consolidated the zombie attacks, so that each zombie has to be attacked separately and dies separately from the other zombie objects that may be present. We also decided to not implement zombie respawning in the same room because it was interfering with the existing zombie objects. The demo also includes an updated key with basic commands. A new major functionality that was included in this version is a banner implementation for game art. ASCII art was created from free image sources and gets displayed for specific objects such as a cactus, the keys, and the zombies, if the player uses the command “Look at X”. The art banner will then show the graphic that is tied to that object, if any.
+
+As in prior demos, the game can be directly run on any Windows platform with the file:
+https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.exe.
+
+For MAC users, the player has to download and install the appropriate interpreter for their system: https://www.tads.org/tads3.htm# (either QTads or CocoaTADS).
+
+For Unix/Linux users, the player has to download and install either QTads or FrobTads. FrobTads is a console text-only interpreter: 
+https://www.tads.org/tads3.htm#.
+
+For support in downloading and installing the QTads interpreter refer to: https://realnc.github.io/qtads/old_index.html#Download.
+
+Once QTads (or CocoaTADS) has been installed, the player can download the zipped game file from:
+https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.zip
+
+
 **Demo 3 (11/29/2020)**
 
 In this demo, we have included a zombie class that defines a zombie as a Thing. Also, the storyline now includes specific hints when in a certain room, or when the player is carrying a specific item. In terms of combat implementation, the player can attack the zombie and the zombie also attacks the player and may or may not inflict damage. We also included a test sword that damages the zombie. The player is presented with a key in the beginning of the game that provides game specific commands. Also, another improvement to the game is the addition of a hit points counter. The player can see how many hit points they have at all times. A compass was also added into the banner and gives the player a visual regarding what exits are available in each room.
