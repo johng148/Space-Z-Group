@@ -71,6 +71,9 @@ class ZombieClass : Thing
             "You killed the zombie!";
         location = nil; // removes the zombie from the room.
         isListed = nil; // removes the zombie from the room list.
+            pic = nil;
+            desc = nil;
+            artBanner.clearWindow();
         } // end of if
         
         // If the Zombie is not dead and it was attacked it will attack back.
@@ -119,23 +122,19 @@ LeglessZombie : ZombieClass
   ZombieCurHP = 2 //Zombie current health
    pic = artBanner.showArt('bloodyzombie')
     
+    
 ;
  modify Thing
   pic = nil
 
   mainExamine()
   {
+   
     inherited();
-    if(pic)
+    if(pic )
       pic.showPic();
   }
 ;
-
-
-
-
-    
-
 
 
 /*
