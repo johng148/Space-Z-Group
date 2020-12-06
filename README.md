@@ -16,6 +16,7 @@ https://www.tads.org/
 **Current Progress:**
 
 **Demo 4 (12/6/2020)**
+
 This is the final demo to be presented in class. In this version, we have finished the combat implementation so that the Zombie class creates a generic zombie type that can be implemented with different characteristics, such as different hit points and different descriptions. We have also consolidated the zombie attacks, so that each zombie has to be attacked separately and dies separately from the other zombie objects that may be present. We also decided to not implement zombie respawning in the same room because it was interfering with the existing zombie objects. The demo also includes an updated key with basic commands. A new major functionality that was included in this version is a banner implementation for game art. ASCII art was created from free image sources and gets displayed for specific objects such as a cactus, the keys, and the zombies, if the player uses the command “Look at X”. The art banner will then show the graphic that is tied to that object, if any.
 
 As in prior demos, the game can be directly run on any Windows platform with the file:
