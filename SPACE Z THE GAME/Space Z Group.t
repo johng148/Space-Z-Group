@@ -53,6 +53,9 @@ gameMain: GameMainDef
     showIntro(){
         "SPACE Z: THE GAME<.p>Key actions you have:<.p>Attack ~ Can be used to attack a zombie.<.p>
         Heal ~ Can be used to heal yourself when you have a first aid kit.<.p>";
+        
+        hitpointsBanner.showHitpoints(5);
+        artBanner.showArt('spacestation');
     }
 ;
 
@@ -187,6 +190,27 @@ VerbRule (damage)
     'damage' | 'hploss' : damageAction
     verbPhrase = 'damage/hploss'
 ;
+
+//    modify Thing
+//        pic = nil
+//
+//        mainExamine()
+//    {
+//    inherited();
+//    if(pic)
+//      pic.showArt(description);
+//  }
+//;
+//     modify LookAction
+//        execAction()
+//        {
+//            inherited();
+//    
+//            local loc = gActor.getOutermostRoom();
+//            if(loc.pic)
+//            loc.showArt(description);
+//  } 
+//;
 
 
 

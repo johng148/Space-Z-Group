@@ -55,5 +55,6 @@ cactus : Thing
   desc = "The potted plant is small green cactus. The needles look sharp."  // Description of the object.
   adjective = 'green' 'sharp'  // Attributes that the object has.
   location = SleepingQuarters  // Location of the object.
+   
 ;     
     

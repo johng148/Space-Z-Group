@@ -1,7 +1,7 @@
 #charset "us-ascii"
 #include <adv3.h>
 #include <en_us.h>
-//Zombie calss
+//Zombie class
 //Class name: ZombieClass
 //Inherits from "Thing" class
 //Has properites "ZombieHealth" and "ZombieCurrHP" as well as method "getHP"
@@ -23,7 +23,7 @@ class ZombieClass : Thing
  
  } // end of dobjFor for Take
     
-    // If the player trys to attack the zombie it will let them.
+    // If the player tries to attack the zombie it will let them.
     dobjFor(Attack){
          
       action() { 
@@ -117,10 +117,15 @@ LeglessZombie : ZombieClass
   adjective = 'legless' 'zombie'  // Attributes that the object has.
   location = SleepingQuarters  // Location of the object.
   ZombieCurHP = 2 //Zombie current health
-
+    
+       dobjFor(LookAction){
+         
+      verify() { 
+            "pic here";
+            artBanner.showArt('bloodyzombie');
+        }
+    }
 ;
-
-
 
 /*
  *  This object is a zombie.

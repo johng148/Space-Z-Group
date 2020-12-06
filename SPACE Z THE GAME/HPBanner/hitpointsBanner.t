@@ -22,9 +22,9 @@ hitpointsBanner: CustomBannerWindow {
      *   where each list element has the same meaning at the corresponding
      *   argument to BannerWindow.showBanner()
      */
-    bannerArgs = [nil, BannerAfter, statuslineBanner, BannerTypeText, 
+    bannerArgs = [nil, BannerFirst, statuslineBanner, BannerTypeText, 
         BannerAlignTop, 4, BannerSizeAbsolute, BannerStyleBorder]
-    currentContents = '<img src="hpgraphics/hp5.png" >'
+//    currentContents = '<img src="hpgraphics/hp5.png" >'
 ;
               
     showHitpoints(CurHP)  {

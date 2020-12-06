@@ -1,3 +1,4 @@
+# 
 # Hitpoints Display Banner Extension
 #
 
@@ -7,6 +8,7 @@ source: customBanner
 # Custom Banner is an extension created by Eric Eve.
 
 source: hitpointsBanner
-#Hitpoints Banner was created by SpaceZGroup to display graphics.
+#Hit Points Banner was created by Space Z Group to display graphics.
 
 resource: hpgraphics
+## All hit points graphics were created by Space Z Group. No attribution required.
