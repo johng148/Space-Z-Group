@@ -63,10 +63,13 @@ gameMain: GameMainDef
 /*
  * Door keys are defined outside of the rooms and then placed inside with @.
  */
-SecurityKey : Key 'Security key/card' 'Security key card' @CommonRoom;
-MedKey : Key 'Medbay key/card' 'MedBay key card' @CommonRoom;
-ShuttleKey : Key 'Shuttlebay key/shuttle bay key/card' 'Shuttle Bay key card' @CommonRoom;
-BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom;
+SecurityKey : Key 'Security key/card' 'Security key card' @CommonRoom pic = artBanner.showArt('keycard');
+
+MedKey : Key 'Medbay key/card' 'MedBay key card' @CommonRoom pic = artBanner.showArt('keycard');
+
+ShuttleKey : Key 'Shuttlebay key/shuttle bay key/card' 'Shuttle Bay key card' @CommonRoom pic = artBanner.showArt('keycard');
+
+BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom pic = artBanner.showArt('keycard');
 
 
 /*
@@ -191,24 +194,15 @@ VerbRule (damage)
     verbPhrase = 'damage/hploss'
 ;
 
-//    modify Thing
-//        pic = nil
-//
-//        mainExamine()
-//    {
-//    inherited();
-//    if(pic)
-//      pic.showArt(description);
-//  }
-//;
-modify LookAction
+
+modify LookAction // modify's look action to allow custom art to be shown when looked at.
   execAction()
   {
     inherited();
     
     local loc = gActor.getOutermostRoom();
     if(loc.pic)
-      loc.showArt();
+      loc.showArt(); // looks at show art method to find specific pic. 
   } 
 ;
 

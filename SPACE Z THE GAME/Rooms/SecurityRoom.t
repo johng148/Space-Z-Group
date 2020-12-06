@@ -23,6 +23,8 @@ Securityroom: Room 'Security Room'
 ;
 
 //Added a sword object in the security room
-+ Sword: Thing 'Sword' 'Sword'
++ Sword: Thing 'Sword' 'Sword' 
     "A well sharpened antique sword; it could be useful."
+    pic = artBanner.showArt('sword')
+    swordDamage = 2;
 ;

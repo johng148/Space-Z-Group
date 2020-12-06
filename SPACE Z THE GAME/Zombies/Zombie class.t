@@ -56,7 +56,7 @@ class ZombieClass : Thing
         local x;
         
         //the sword does 5 damage
-        if(testSword.location == me){
+        if(Sword.location == me){
            ZombieCurHP -= 2;
         }//if user has a sword
         
@@ -147,6 +147,6 @@ ArmlessZombie : ZombieClass
   desc = "A armless rotting zombie that is walking around the room."  // Description of the object.
   adjective = 'armless' 'zombie'  // Attributes that the object has.
   location = SleepingQuarters  // Location of the object.
-    pic = artBanner.showArt('bloodyzombie')
+    pic = artBanner.showArt('womanzombie')
 ;
 

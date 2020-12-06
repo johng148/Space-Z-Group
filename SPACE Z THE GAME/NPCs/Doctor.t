@@ -12,6 +12,7 @@ doctor : Person 'doctor' 'doctor'  // Defines that this is an NPC that is a doct
   globalParamName = 'doctor'  // What this NPC is called when using the message 
                                                      //parameter strings which looks like: {The doctor/he}.
   isHim = true  // Marks the NPC as a he.
+    pic = artBanner.showArt('doctor')
 ;
 
 

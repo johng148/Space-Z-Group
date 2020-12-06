@@ -43,34 +43,34 @@ artBanner: CustomBannerWindow {
         artBanner.updateContents('<img src="asciiArt/bloodyzombie.jpg" height="300">');
     }               
     else if (description == 'cactus' )  {
-        artBanner.updateContents('<img src="asciiArt/cactus.jpg">');
+        artBanner.updateContents('<img src="asciiArt/cactus.jpg"height="250">');
     }   
      else if (description == 'doctor' )  {
-        artBanner.updateContents('<img src="asciiArt/doctor.jpg">');
+        artBanner.updateContents('<img src="asciiArt/doctor.jpg"height="250">');
     }   
      else if (description == 'fullmalezombie' )  {
-        artBanner.updateContents('<img src="asciiArt/fullmalezombie.jpg">');
+        artBanner.updateContents('<img src="asciiArt/fullmalezombie.jpg"height="250">');
     }   
      else if (description == 'keycard' )  {
-        artBanner.updateContents('<img src="asciiArt/keycard.jpg">');
+        artBanner.updateContents('<img src="asciiArt/keycard.jpg"  height="250">');
     }   
     else if (description == 'medkit' )  {
-        artBanner.updateContents('<img src="asciiArt/medkit.jpg" height="300">');
+        artBanner.updateContents('<img src="asciiArt/medkit.jpg" height="250">');
     } 
      else if (description == 'metaldoor' )  {
-        artBanner.updateContents('<img src="asciiArt/metaldoor.jpg">');
+        artBanner.updateContents('<img src="asciiArt/metaldoor.jpg" height="300">');
     } 
      else if (description == 'spacestation' )  {
         artBanner.updateContents('<img src="asciiArt/spacestation.jpg" height="200">');
     } 
     else if (description == 'sword' )  {
-        artBanner.updateContents('<img src="asciiArt/sword.jpg">');
+        artBanner.updateContents('<img src="asciiArt/sword.jpg" height="200">');
     } 
     else if (description == 'veteran' )  {
-        artBanner.updateContents('<img src="asciiArt/veteran.jpg">');
+        artBanner.updateContents('<img src="asciiArt/veteran.jpg" height="250">');
     } 
     else if (description == 'womanzombie' )  {
-        artBanner.updateContents('<img src="asciiArt/womanzombie.jpg">');
+        artBanner.updateContents('<img src="asciiArt/womanzombie.jpg" height="250">');
     } 
 }
 

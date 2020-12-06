@@ -14,6 +14,7 @@ veteran : Person 'veteran' 'veteran'  // Defines this NPC as a veteran
   globalParamName = 'veteran'  // What this NPC is called when using the 
     //message parameter strings which looks like: {The veteran/he}.
   isHim = true  // Marks the NPC as a he.
+  pic = artBanner.showArt('veteran')
 ;
 
 
