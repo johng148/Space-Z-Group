@@ -117,15 +117,26 @@ LeglessZombie : ZombieClass
   adjective = 'legless' 'zombie'  // Attributes that the object has.
   location = SleepingQuarters  // Location of the object.
   ZombieCurHP = 2 //Zombie current health
+   pic = artBanner.showArt('bloodyzombie')
     
-       dobjFor(LookAction){
-         
-      verify() { 
-            "pic here";
-            artBanner.showArt('bloodyzombie');
-        }
-    }
 ;
+ modify Thing
+  pic = nil
+
+  mainExamine()
+  {
+    inherited();
+    if(pic)
+      pic.showPic();
+  }
+;
+
+
+
+
+    
+
+
 
 /*
  *  This object is a zombie.
@@ -137,3 +148,4 @@ ArmlessZombie : ZombieClass
   adjective = 'armless' 'zombie'  // Attributes that the object has.
   location = SleepingQuarters  // Location of the object.
 ;
+

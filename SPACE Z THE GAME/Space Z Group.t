@@ -201,16 +201,17 @@ VerbRule (damage)
 //      pic.showArt(description);
 //  }
 //;
-//     modify LookAction
-//        execAction()
-//        {
-//            inherited();
-//    
-//            local loc = gActor.getOutermostRoom();
-//            if(loc.pic)
-//            loc.showArt(description);
-//  } 
-//;
+modify LookAction
+  execAction()
+  {
+    inherited();
+    
+    local loc = gActor.getOutermostRoom();
+    if(loc.pic)
+      loc.showArt();
+  } 
+;
+
 
 
 
