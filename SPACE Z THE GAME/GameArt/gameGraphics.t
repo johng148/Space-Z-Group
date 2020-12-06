@@ -61,7 +61,7 @@ artBanner: CustomBannerWindow {
         artBanner.updateContents('<img src="asciiArt/metaldoor.jpg" height="300">');
     } 
      else if (description == 'spacestation' )  {
-        artBanner.updateContents('<img src="asciiArt/spacestation.jpg" height="200">');
+        artBanner.updateContents('<img src="asciiArt/spacestation.jpg" height="300">');
     } 
     else if (description == 'sword' )  {
         artBanner.updateContents('<img src="asciiArt/sword.jpg" height="200">');

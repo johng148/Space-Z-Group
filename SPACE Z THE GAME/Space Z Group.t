@@ -52,7 +52,10 @@ gameMain: GameMainDef
     // Gives a title to the game and states what actions a player has.
     showIntro(){
         "SPACE Z: THE GAME<.p>Key actions you have:<.p>Attack ~ Can be used to attack a zombie.<.p>
-        Heal ~ Can be used to heal yourself when you have a first aid kit.<.p>";
+        Heal ~ Can be used to heal yourself when you have a first aid kit.<.p> Take ~ Take objects and put 
+        them into your inventory. <.p> Look ~ Command to take a closer look at a person or object.<.p>
+        Inventory ~ This shows you what you are carrying around!<.p>
+        Hints ~ Use this command to get help navigating through the game, wherever hints are available.<.p>";
         
         hitpointsBanner.showHitpoints(5);
         artBanner.showArt('spacestation');
