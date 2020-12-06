@@ -55,7 +55,7 @@ artBanner: CustomBannerWindow {
         artBanner.updateContents('<img src="asciiArt/keycard.jpg">');
     }   
     else if (description == 'medkit' )  {
-        artBanner.updateContents('<img src="asciiArt/medkit.jpg">');
+        artBanner.updateContents('<img src="asciiArt/medkit.jpg" height="300">');
     } 
      else if (description == 'metaldoor' )  {
         artBanner.updateContents('<img src="asciiArt/metaldoor.jpg">');

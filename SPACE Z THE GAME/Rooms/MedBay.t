@@ -26,4 +26,5 @@ MedBay: Room 'MedBay'
 //Added First aid kit object in med bay
 + FirstAidKit: Thing 'First aid kit' 'First aid kit'
     "A first aid kit that can be used to heal most wounds."
+    pic = artBanner.showArt('medkit')
 ;
