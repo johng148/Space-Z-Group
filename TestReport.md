@@ -27,13 +27,13 @@ To test the individuality of our story, we searched for similar games on the Int
 Sources were found but a need for variety in statistical data is why this was not accepted.
 <br><br>
 7: Money Maker………………………...….Not Accepted As Implemented<br>
-Since the game is not completed and our research on marketability needs to be expanded this was not accepted.
+Research on marketability needs to be expanded this was not accepted.
 <br><br>
-8: Age Appropriateness……….….................Not Accepted As Implemented<br>
-The storyline is not yet complete, so it has not been fully tested with a broader audience of all ages. The storyline and addition of zombies will likely drive the age appropriateness to a teen or adult.
+8: Age Appropriateness……….….................Accepted As Implemented<br>
+The game is not rated "E" for Everyone, but it is acceptable for Teens with parental guidance, and adults.
 <br><br>
-9: Representation………………………..…..Not Accepted As Implemented<br>
-So far all of the NPCs that have been added are male. We need to add at least one strong female character that will balance the gender base and appeal to more players.
+9: Representation………………………..…..Accepted As Implemented<br>
+A female character was added to the game to increase diversity.
 <br><br>
 10: Platform Diversity………………............Accepted As Implemented<br>
 The game can be played on multiple computer platforms such as Windows, Linux, Unix, and Mac. We created game files usable on each of these platforms starting with Demo 2.
