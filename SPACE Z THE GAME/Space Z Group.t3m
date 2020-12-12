@@ -39,6 +39,7 @@
 -source Rooms/SecurityRoom
 -source NPCs/Doctor
 -source Rooms/Bridge
+-source Captain
 -source NPCs/Veteran
 -lib HPBanner/hpdisplaybanner
 -lib compass/compass
