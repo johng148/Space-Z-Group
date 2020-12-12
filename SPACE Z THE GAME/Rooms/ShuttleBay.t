@@ -19,6 +19,7 @@ ShuttleBay: Room 'Shuttle Bay'
 
 + InShuttledoor: Lockable, Door -> Shuttledoor 'Shuttle Bay door' 'Shuttle Bay door'
     "Restricted Access airlock door that leads into the Docking Compartment. "
+    pic = artBanner.showArt('metaldoor')
 ;
 
 

@@ -19,6 +19,7 @@ Bathroom: Room 'Bathroom'
 + InBathdoor: LockableWithKey, Door -> Bathdoor 'bath bathroom door' 'Bathroom Door'
     "Metal airlock door that leads from the bathroom to the Sleeping Quarters. "
     keyList = [BathKey]
+    pic = artBanner.showArt('metaldoor')
 ;
 
 

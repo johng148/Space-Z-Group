@@ -20,8 +20,10 @@ MessHall: Room 'Mess Hall'
 
 + InMessdoor: Door -> Messdoor 'Mess door' 'Mess Hall Door'
     "Set of double doors that leads into the Common Room. "
+    pic = artBanner.showArt('metaldoor')
 ;
 
 + Galleydoor: Door 'galley kitchen door' 'Galley door'
     "A creaky swinging door into the Galley. "
+    pic = artBanner.showArt('metaldoor')
 ;

@@ -16,10 +16,12 @@ Securityroom: Room 'Security Room'
 
 + InSecuritydoor: Lockable,  Door -> Securitydoor 'Security door' 'Security Door'
     "Door in security room to Medbay"
+    pic = artBanner.showArt('metaldoor')
 ;
 
 + Bridgedoor: Door 'Bridge door' 'Bridge door'
     "door in security room to Bridge."
+    pic = artBanner.showArt('metaldoor')
 ;
 
 //Added a sword object in the security room

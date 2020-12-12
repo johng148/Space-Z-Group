@@ -18,10 +18,12 @@ DockingComp: Room 'Docking Compartment'
     "Metal airlock door that connects the Docoking Compartment to the Common Room.
     The door has a sign reminding you to: \"Finish Decontamination Process Before 
     Proceeding into Station!\" "
+    pic = artBanner.showArt('metaldoor')
 ;
 
 + Shuttledoor:LockableWithKey, Door 'shuttle shuttlebay door' 'Shuttle Bay Door'
     "Restricted Access airlock door into the Shuttle Bay. "
     keyList = [ShuttleKey]
+    pic = artBanner.showArt('metaldoor')
 ;
 

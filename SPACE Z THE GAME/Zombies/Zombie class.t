@@ -91,22 +91,6 @@ class ZombieClass : Thing
             } // end of else
         } // end of if
         
-//         if(FirstAidKit.location == me && location == nil) { // zombie respawn
-//            location = me.location;
-//            isListed = true;
-//            ZombieCurHP = 3;
-//    "A wild zombie has appeared and is trying to bite you! ";
-//           // "<<ZombieCurHP>>\n";//
-//            // If the Zombie has a health that is even it will successfully attack the player. Else it misses.
-//            x = rand(100);
-//            if(x >=50){
-//                "It bit you! ";
-//                MyHP.damageHP (); 
-//            } // end of if
-//            else{
-//             "It missed...";
-//            } // end of else
-//    }// end medbay location if
   
     } // end of ZombieHP    
       

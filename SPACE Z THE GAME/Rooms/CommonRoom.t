@@ -21,19 +21,23 @@ CommonRoom: Room 'Common Room'
 
 + inCommondoor: Door -> Commondoor 'Common common room door' 'Common Room Door'
     "Heavy metal airlock door that leads to the Sleeping Quarters. "
+    pic = artBanner.showArt('metaldoor')
 ;
 
 + Dockingdoor: Door 'Docking compartment door' 'Docking Compartment door'
     "Metal airlock door that reads \"RESTRICTED ACCESS: Authorized Personnel 
     Only Beyond This Point\" and opens into the Docking Compartment. "
+    pic = artBanner.showArt('metaldoor')
 ;
 
 + Messdoor: Door 'mess hall messhall door*doors' 'Mess hall Door'
     "Set of double doors that leads into the Mess Hall."
+    pic = artBanner.showArt('metaldoor')
 ;
 
 + Meddoor: LockableWithKey, Door 'Medbay door' 'MedBay Door'
     "Metal airlock door that opens into the Med Bay. "
     keyList = [MedKey]
+    pic = artBanner.showArt('metaldoor')
 ;
 

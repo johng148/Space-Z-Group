@@ -37,8 +37,8 @@
 -source Rooms/Galley
 -source Rooms/MedBay
 -source Rooms/SecurityRoom
--source Rooms/Bridge
 -source NPCs/Doctor
+-source Rooms/Bridge
 -source NPCs/Veteran
 -lib HPBanner/hpdisplaybanner
 -lib compass/compass

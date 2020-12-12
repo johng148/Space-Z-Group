@@ -16,11 +16,13 @@ MedBay: Room 'MedBay'
 
 + InMeddoor: LockableWithKey, Door -> Meddoor 'Med door' 'Med door'
     "doon in medbay to Commonroom"
+    pic = artBanner.showArt('metaldoor')
 ;
 
 + Securitydoor: LockableWithKey, Door 'Security door' 'Security door'
     "door in medbay to Security room"
     keyList = [SecurityKey]
+    pic = artBanner.showArt('metaldoor')
 ;
 
 //Added First aid kit object in med bay

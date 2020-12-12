@@ -40,10 +40,12 @@ SleepingQuarters: Room 'Sleeping Quarters'
 + Bathdoor: LockableWithKey, Door 'bath bathroom door' 'Bathroom Door'
     "A metal airlock door that leads to the bathroom. "
     keyList = [BathKey] 
+    pic = artBanner.showArt('metaldoor')
 ;
 
 + Commondoor: Door 'common commonroom door' 'Common Room Door'
     "Heavy metal airlock door that leads to the Common Room. "
+    pic = artBanner.showArt('metaldoor')
 ;
 
 /*

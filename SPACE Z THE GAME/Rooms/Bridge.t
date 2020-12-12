@@ -15,4 +15,5 @@ Bridge: Room 'Bridge'
 
 + InBridgedoor: Door -> Bridgedoor 'Bridge door' 'Bridge door'
     "door in Bridge  to Security room."
+    pic = artBanner.showArt('metaldoor')
 ;

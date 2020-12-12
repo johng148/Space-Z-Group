@@ -16,4 +16,5 @@ Galley: Room 'Galley'
 
 + InGalleydoor: Door -> Galleydoor 'Galley door' 'Galley door'
     "A creaky swinging door from the Galley into the Mess Hall. "
+    pic = artBanner.showArt('metaldoor')
 ;
