@@ -2,11 +2,11 @@
 #include <adv3.h>
 #include <en_us.h>
 
+
 /*
  * ROOM: Mess Hall
- * NPC's: 
- * Carry Objects:
- * Immovable Objects:
+ * NPC's: None
+ * Carry Objects: None
  */
 MessHall: Room 'Mess Hall'
     "A large common room with vaulted ceilings and bright lighting. Six long tables, that seat eight 
@@ -18,12 +18,20 @@ MessHall: Room 'Mess Hall'
     north = InMessdoor
 ;
 
+
+/*
+ * Door that leads into the Common Room.
+ */
 + InMessdoor: Door -> Messdoor 'Mess door' 'Mess Hall Door'
-    "Set of double doors that leads into the Common Room. "
-    pic = artBanner.showArt('metaldoor')
+    "A metal door that leads into the Common Room. "
+    pic = artBanner.showArt('metaldoor') // The art that is displayed when the item is looked at.
 ;
 
+
+/*
+ * Door that leads into the Galley.
+ */
 + Galleydoor: Door 'galley kitchen door' 'Galley door'
-    "A creaky swinging door into the Galley. "
-    pic = artBanner.showArt('metaldoor')
+    "A metal door that leads into the Galley. "
+    pic = artBanner.showArt('metaldoor') // The art that is displayed when the item is looked at.
 ;
