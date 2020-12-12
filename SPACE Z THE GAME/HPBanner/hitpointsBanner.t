@@ -24,7 +24,6 @@ hitpointsBanner: CustomBannerWindow {
      */
     bannerArgs = [nil, BannerFirst, statuslineBanner, BannerTypeText, 
         BannerAlignTop, 4, BannerSizeAbsolute, BannerStyleBorder]
-//    currentContents = '<img src="hpgraphics/hp5.png" >'
 ;
               
     showHitpoints(CurHP)  {

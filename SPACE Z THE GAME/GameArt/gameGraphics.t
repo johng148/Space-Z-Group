@@ -24,16 +24,13 @@ artBanner: CustomBannerWindow {
      */
     bannerArgs = [nil, BannerAfter, statuslineBanner, BannerTypeText, 
         BannerAlignRight,10 , BannerSizeAbsolute, BannerStyleBorder]
-        
-//        currentContents = '<img src="aciiArt/spacestation.jpg" >'
+ 
         autoSize = true
 ;
               
     showArt(description)  {
         clearWindow();
-         
-//        picWin = bannerCreate(nil, BannerAfter, statuslineBanner.handle_, BannerTypeText, 
-//              BannerAlignTop, 10, BannerSizeAbsolute, BannerStyleBorder);
+ 
 
      /*
       *   Calling updateContents() changes what the banner displays. It contains

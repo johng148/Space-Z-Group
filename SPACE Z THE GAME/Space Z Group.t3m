@@ -37,15 +37,15 @@
 -source Rooms/Galley
 -source Rooms/MedBay
 -source Rooms/SecurityRoom
--source NPCs/Doctor
 -source Rooms/Bridge
--source Captain
+-source hints/hints
+-source NPCs/Doctor
 -source NPCs/Veteran
+-source NPCs/Captain
 -lib HPBanner/hpdisplaybanner
 -lib compass/compass
--source hints/hints
--source "Zombies/Zombie class"
 -lib GameArt/GameGraphicsLib
+-source "Zombies/Zombie class"
 
 -res
 GameInfo.txt

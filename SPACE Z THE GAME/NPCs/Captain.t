@@ -13,7 +13,7 @@ captain : Person 'captain' 'captain'  // Defines this NPC as a captain
   globalParamName = 'captain'  // What this NPC is called when using the 
     //message parameter strings which looks like: {The captain/he}.
   isHim = true  // Marks the NPC as a he.
-  pic = artBanner.showArt()
+  pic = artBanner.showArt('captain')
 ;
 
 

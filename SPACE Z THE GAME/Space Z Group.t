@@ -21,9 +21,7 @@
 #include <en_us.h>
 
 /*
- *   Our game credits and version information.  This object isn't required
- *   by the system, but our GameInfo initialization above needs this for
- *   some of its information.
+ *   Our game credits and version information.  
  */
 versionInfo: GameID
     IFID = '349b9587-c79f-4bd2-af42-e04570ad5f8b'
@@ -66,13 +64,13 @@ gameMain: GameMainDef
 /*
  * Door keys are defined outside of the rooms and then placed inside with @.
  */
-SecurityKey : Key 'Security key/card' 'Security key card' @CommonRoom pic = artBanner.showArt('keycard');
+SecurityKey : Key 'Security key/ security key' 'Security key' @Bathroom pic = artBanner.showArt('keycard');
 
-MedKey : Key 'Medbay key/card' 'MedBay key card' @CommonRoom pic = artBanner.showArt('keycard');
+MedKey : Key 'Medbay key/ med bay key' 'MedBay key' @Galley pic = artBanner.showArt('keycard');
 
-ShuttleKey : Key 'Shuttlebay key/shuttle bay key/card' 'Shuttle Bay key card' @CommonRoom pic = artBanner.showArt('keycard');
+ShuttleKey : Key 'Shuttlebay key/shuttle bay key' 'Shuttle Bay key' @Bridge pic = artBanner.showArt('keycard');
 
-BathKey : Key 'bathroom key/card' 'Bathroom key card' @CommonRoom pic = artBanner.showArt('keycard');
+BathKey : Key 'bathroom key/ bath room key' 'Bathroom key' @MedBay pic = artBanner.showArt('keycard');
 
 
 /*
