@@ -30,6 +30,7 @@ https://www.tads.org/t3doc/doc/gsg/index.html
 https://www.tads.org/t3doc/doc/learning/Learning%20T3.pdf
 
 
+
 **2. General Description of Product**
 
 This will be a text based adventure game which involves a main character (the player) traversing a space station after a mysterious outbreak has occurred. This unknown virus is making people very ill and reanimating those that have died. The player must traverse the station to find the cause of the outbreak and eventually escape. The player will be able to talk to various NPCs throughout the station and be able to add them to their party, giving certain benefits.The player will also have various encounters with the aforementioned undead victims, in which they will be able to fight or flee from them. Through the course of the game the player will also be able to obtain various items like weapons and items to help heal the player and the party. The game will end once the player’s HP drops to zero or the player escapes.
@@ -62,12 +63,16 @@ The user is expected to know the basic commands that are typed such as getting i
 The user will need to have speakers in order for the sound to be played. The user would also need to have the basic functions that are needed to play the game. Get key, for example, or some variation needs to be known in order for the user to get seamless gameplay.
 
 **2.6 Assumptions and Dependencies**
+
 The assumption is that the user will have an operating system installed on their computer that is compatible with the TADS Interpreter; the compatible operating systems are Windows, Mac OSX, or Linux/Unix. The game also depends on the player having installed the TADS Interpreter on their computer.
+
 
 
 **3. Functional Requirements**
 
 https://github.com/johng148/Space-Z-Group/blob/master/User%20Stories.md 
+
+
 
 **4. System and Non-functional Requirements**
 
@@ -98,6 +103,8 @@ NF.4.4.2 Game Time: The users expect the game to be able to run a long time with
 **4.5 Other Requirements**
 
 NF.4.5.1 No other requirements are needed.
+
+
 
 **5. Appendices**
 
