@@ -51,7 +51,7 @@ The model shows how everything is connected to each other. The player is able to
 
 **2.3 Product Functions (general)**
 
-The game will have a basic popup window in which most of the interactions will take place. The user will be able to use this window to input commands that the game can take and then feedback will be shown based on what command was used. Feedback can include text, images and potentially sound.<br />
+The game will have a basic popup window in which most of the interactions will take place. The user will be able to use this window to input commands that the game can take and then feedback will be shown based on what command was used. Feedback can include text, images and potentially sound.
 
 **2.4 User Characteristics and Expectations**
 
@@ -108,7 +108,7 @@ NF.4.5.1 No other requirements are needed.
 
 **5. Appendices**
 
-Space-Z-Group Domain Model:https://github.com/johng148/Space-Z-Group/blob/master/SPACE%20Z%20THE%20GAME/Graphics/Domain%20Model.PNG
+Space-Z-Group Domain Model:  https://github.com/johng148/Space-Z-Group/blob/master/SPACE%20Z%20THE%20GAME/Graphics/Domain%20Model.PNG
 
 To download the TADS Interpreter: https://www.tads.org/tads3.htm
 
