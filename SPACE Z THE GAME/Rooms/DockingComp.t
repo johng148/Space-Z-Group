@@ -9,7 +9,10 @@
  * Carry Objects: None
  */
 DockingComp: Room 'Docking Compartment'
-    "room connecting Docking Compartment and Shuttle Bay. "
+    "The Docking Compartment is a wide bay with tall ceilings and a smooth concrete floor. 
+    The door you entered faces the north wall, which contains 2 docking stations, 
+    and circular hatch doors for people to enter the space station after their ships docked. The hatch doors
+    are about four feet in diamater and do not open unless the airlocks have fully engaged."
     east = Shuttledoor
     south = InDockingdoor
 ;

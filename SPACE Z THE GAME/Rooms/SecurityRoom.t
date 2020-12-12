@@ -9,7 +9,8 @@
  * Carry Objects: Sword
  */
 Securityroom: Room 'Security Room'
-    "room with veteran in it"
+    "A small room with security monitors, a desk and a few weapons. 
+    It smells faintly of cigar smoke. You see Bill the veteran."
     north = InSecuritydoor
     east = Bridgedoor
 ;
@@ -19,7 +20,7 @@ Securityroom: Room 'Security Room'
  * Door that leads into the Medbay.
  */
 + InSecuritydoor: Lockable,  Door -> Securitydoor 'Security door' 'Security Door'
-    "Door in security room to Medbay"
+    "Metal airlock door in Security Room to the Med Bay."
     pic = artBanner.showArt('metaldoor') // The art that is displayed when the item is looked at.
 ;
 
@@ -28,7 +29,7 @@ Securityroom: Room 'Security Room'
  * Door that leads into the Bridge.
  */
 + Bridgedoor: Door 'Bridge door' 'Bridge door'
-    "Door in security room to Bridge."
+    "Metal airlock door in the Security Room to the Bridge."
     pic = artBanner.showArt('metaldoor') // The art that is displayed when the item is looked at.
 ;
 

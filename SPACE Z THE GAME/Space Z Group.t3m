@@ -42,6 +42,7 @@
 -source NPCs/Doctor
 -source NPCs/Veteran
 -source NPCs/Captain
+-source NPCs/Chef
 -lib HPBanner/hpdisplaybanner
 -lib compass/compass
 -lib GameArt/GameGraphicsLib

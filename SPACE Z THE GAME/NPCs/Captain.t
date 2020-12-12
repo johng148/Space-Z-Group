@@ -8,7 +8,8 @@
  */
 captain : Person 'captain' 'captain'  // Defines this NPC as a captain
     @Bridge  // Marks the location of the NPC.
-    "The captain is a tall and stern man, his uniform without so much as a blemish on it. You can tell he is not one to stand for disorder "  // A description of the NPC.
+    "The captain is a tall and stern man, his uniform without so much as a blemish on it. 
+    You can tell he is not one to stand for disorder "  // A description of the NPC.
     properName = 'Evan A. Cogsgrove'  // The NPC's name.
     globalParamName = 'captain'  // What this NPC is called when using the 
     isHim = true  // Marks the NPC as a he.
@@ -59,7 +60,8 @@ captain : Person 'captain' 'captain'  // Defines this NPC as a captain
       (You can ask him about himself)<.p>',
       '<q>Captain, something terrible is happening to the station</q> you say worried.<.p>
       <q>That would explain why I haven\'t heard from anyone in a while, I simply thought it was insubordination.</q>
-      {the captain/he} says annoyed. He seems more concerned with the disorder, than whats actually happeing.'
+      {the captain/he} says annoyed. He seems more concerned with the disorder, than what\'s 
+      actually happening.'
     ]
 ;
 

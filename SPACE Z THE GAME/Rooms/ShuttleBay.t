@@ -10,7 +10,7 @@
  */
 ShuttleBay: Room 'Shuttle Bay'
     "This room is a large hangar where the emergency self-navigable escape shuttles are housed. You
-    have reached the final obstacle in your ardous journey. Enter the emergency self-navigable escape shuttle! "
+    have reached the final obstacle in your arduous journey. Enter the emergency self-navigable escape shuttle! "
     west = InShuttledoor
 ;
 
@@ -45,7 +45,7 @@ escapeShuttle : Thing
     // If the player trys to take the shuttle it will not let them.
     dobjFor(Take){     
       verify() { 
-            illogical('The shuttle is to heavy to carry.');   
+            illogical('The shuttle is to heavy to carry!');   
       } // end of verify
     } // end of dobjFor for Take
 ;

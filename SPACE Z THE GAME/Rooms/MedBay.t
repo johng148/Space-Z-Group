@@ -9,7 +9,9 @@
  * Carry Objects: First aid kit, Bathroom Key
  */
 MedBay: Room 'MedBay'
-    "room with doctor starting point"
+    "This room wide with low ceilings and smells of disinfectant. There are several steel tables bolted
+    to the ground and every kind of medical apparatus litters the surfaces. The north wall has shelves lined
+    with pull-out drawers full of medical supplies. Despite the clutter, the room is very sterile."
     west = InMeddoor
     south = Securitydoor
 ;
@@ -19,7 +21,7 @@ MedBay: Room 'MedBay'
  * Door that leads into the Common Room.
  */
 + InMeddoor: LockableWithKey, Door -> Meddoor 'Med door' 'Med door'
-    "Door in medbay to Commonroom"
+    "Metal airlock door from the Med Bay to the Common Room."
     pic = artBanner.showArt('metaldoor') // The art that is displayed when the item is looked at.
 ;
 
@@ -28,7 +30,7 @@ MedBay: Room 'MedBay'
  * Door that leads into the Security Room.
  */
 + Securitydoor: LockableWithKey, Door 'Security door' 'Security door'
-    "Door in medbay to Security room"
+    "Standard metal airlock door from the Med Bay to the Security Room."
     keyList = [SecurityKey]
     pic = artBanner.showArt('metaldoor') // The art that is displayed when the item is looked at.
 ;
