@@ -96,24 +96,24 @@ class ZombieClass : Thing
         } // end of if
     } // end of ZombieHP    
 
-// check(){
-//    local x;
-//    if(location == me.location){
-//        "The zombie tries to bite you..."; 
-//       
-//            x = rand(100); // Generates a random number.
-//            
-//            // If the randomly generated number is greater then 50 then the zombie sucessfully attacks the player. Else it misses.
-//            if(x >=50){
-//                "It bit you! ";
-//                MyHP.damageHP (); 
-//            } // end of if
-//            else{
-//                "It missed...";
-//            } // end of else
-//        } // end of if       
-//    }// end action
-//    
+    ZombieAttack(){
+    local x;
+    if(afterTravel (me, ZombieClass.location)== true){
+        "The zombie tries to bite you..."; 
+       
+            x = rand(100); // Generates a random number.
+            
+            // If the randomly generated number is greater then 50 then the zombie sucessfully attacks the player. Else it misses.
+            if(x >=50){
+                "It bit you! ";
+                MyHP.damageHP (); 
+            } // end of if
+            else{
+                "It missed...";
+            } // end of else
+        } // end of if       
+    }// end attack
+    
    
 ;// end zombie class
 /*
@@ -141,3 +141,22 @@ ArmlessZombie : ZombieClass
     location = nil  // Location of the object.
     pic = artBanner.showArt('womanzombie') // The art that is displayed when the item is looked at.
 ;
+
+FaceZombie : ZombieClass  
+    name = 'Face Zombie'  // Name of the object.
+    noun = 'Face/Face Zombie' // Nouns that the object may be known as.
+    desc = "A face rotting zombie that is walking around the room."  // Description of the object.
+    adjective = 'face' 'zombie'  // Attributes that the object has.
+    location = nil  // Location of the object.
+    pic = artBanner.showArt('disfiguredzombie') // The art that is displayed when the item is looked at.
+;
+
+FullZombie : ZombieClass  
+    name = 'Full Zombie'  // Name of the object.
+    noun = 'Full/Full Zombie' // Nouns that the object may be known as.
+    desc = "A full bodied rotting zombie that is walking around the room."  // Description of the object.
+    adjective = 'full' 'zombie'  // Attributes that the object has.
+    location = nil  // Location of the object.
+    pic = artBanner.showArt('fullmalezombie') // The art that is displayed when the item is looked at.
+;
+

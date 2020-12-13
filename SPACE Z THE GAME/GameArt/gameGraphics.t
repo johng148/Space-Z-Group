@@ -77,8 +77,6 @@ showArt(description)  {
     } // end of else if   
 } // end of function showArt
 } // end of artBanner
- 
-
 /*
  * This function modifies the thing object to display a picture if the player looks at a specific object that has a picture.
  */

@@ -58,7 +58,10 @@ SecurityKey : Key 'Security key/ security key' 'Security key' @Bathroom pic = ar
       action() { 
            "You hear loud rustling in the Sleeping Quarters. ";
            ArmlessZombie.moveInto(SleepingQuarters); 
-           LeglessZombie.moveInto(CommonRoom);    
+           LeglessZombie.moveInto(CommonRoom); 
+           FaceZombie.moveInto(MessHall); 
+           FullZombie.moveInto(DockingComp); 
+            
         }// end take
     }// end action
 ;
@@ -138,6 +141,7 @@ BathKey : Key 'bathroom key/ bath room key' 'Bathroom key' @SleepingQuarters pic
        
         "Current Health: <<CurHP>>/<<MaxHP>>"; 
     } // end of damageHP  
+      
 ;
 
 
