@@ -59,7 +59,11 @@ chef: Person 'chef' 'chef'  // Defines that this NPC is a chef.
     look at you. <q>Where did you come from?</q> she asks you in a panicked voice.<.p>
     <q>Never mind! </q> she interrupts without giving you time to respond.<.p>
     <q>Do you know what is going on out there? </q>she asks you in a near shout.<.p>
-    <> I have no idea what\'s going on either....</q> you trail off.<.p>'
+    <q> I have no idea what\'s going on either....</q> you trail off.<.p>
+    <q>I have no idea what in the world is happening out there, but I\'m staying put right here,
+    at least until security figures it out</q>she tells you.<.p><q> At least here, I\'ve got my knife,
+    I know my kitchen, and I can take care of myself!</q> she finishes with a determined look 
+    on her face. <.p><q> Besides, those things.... </q> she trails off.<.p>'
   ]
 ;
 
@@ -120,31 +124,14 @@ chef: Person 'chef' 'chef'  // Defines that this NPC is a chef.
 
 
 ++ DefaultAskTellTopic
-	"<q>I have no idea what in the world is happening out there, but I'm staying put right here,
-	at least until security figures it out</q>she tells you.<.p><q> At least here, I've got my knife,
-	I know my kitchen, and I can take care of myself!</q> she finishes with a determined look 
-	on her face. <.p><q> Besides, those things.... </q> she trails off.<.p>"
-;
-
-
-++ AskTopic @chef
-    "<q>I'm sorry doctor could you tell me what your name is again? Also, what is 
-    going on here?</q> you ask worried.<.p>"
-//    <q>After all these years working together you still keep forgetting my name? 
-//    My name is <<doctor.properName>>.</q> he replies.<.p>
-//    <q>To answer your second question we are in the middle of a zombie outbreak. Something went 
-//    wrong and now we are among the undead.
-//    Maybe I can find a solution. I need to work on testing samples.</q> he replies.<.p> 
-//    <.convnode doctor-samples>"
-;
-
-
-	// This is the conversation is a SpecialTopic which is had when the conversation 
-	// node is triggered, and the user chose this path.
-++ SpecialTopic 'what things/ask about things' ['ask', 'what', 'about', 'things']  
-    
-    "<q>What things are you talking about?</q> you ask.<.p>
+"<q>What things are you talking about?</q> you ask.<.p>
     <q>I'm probably being fanciful</q> she replies.<.p><p> But I thought I saw... these...
 	people....only they're not really people... I don't know anymore! I'm probably imagining it!</p>
 	she ends in a terrified quaver.<.p> "
+;
+
+
+// This is the conversation is a SpecialTopic which is had when the conversation 
+// node is triggered, and the user chose this path.
+++ SpecialTopic 'Ask chef about things' ['ask', 'about', 'things']   
 ;
