@@ -8,7 +8,7 @@
  * NPC's: Doctor
  * Carry Objects: First aid kit, Bathroom Key
  */
-MedBay: Room 'MedBay'
+MedBay: Room 'Med Bay'
     "This room wide with low ceilings and smells of disinfectant. There are several steel tables bolted
     to the ground and every kind of medical apparatus litters the surfaces. The north wall has shelves lined
     with pull-out drawers full of medical supplies. Despite the clutter, the room is very sterile."

@@ -64,7 +64,7 @@ SecurityKey : Key 'Security key/ security key' 'Security key' @Bathroom pic = ar
 ;
 
 
-MedKey : Key 'Medbay key/ med bay key' 'MedBay key' @Galley pic = artBanner.showArt('keycard');
+MedKey : Key 'Medbay key/ med bay key' 'Med Bay key' @Galley pic = artBanner.showArt('keycard');
 ShuttleKey : Key 'Shuttlebay key/shuttle bay key' 'Shuttle Bay key' @Bridge pic = artBanner.showArt('keycard');
 BathKey : Key 'bathroom key/ bath room key' 'Bathroom key' @SleepingQuarters pic = artBanner.showArt('keycard');
 
