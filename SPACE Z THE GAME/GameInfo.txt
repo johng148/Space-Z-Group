@@ -6,7 +6,7 @@ AuthorEmail: Johnathon Garcia, Meagan Waldo, Kashka Calvin, Erik Alvarez, Nasley
 Desc: SPACE Z: THE GAME
 HtmlDesc: SPACE Z: THE GAME
 Version: 1
-ReleaseDate: 2020-12-12
+ReleaseDate: 2020-12-13
 Language: en-US
 LicenseType: Freeware
 CopyingRules: Nominal cost only; compilations allowed

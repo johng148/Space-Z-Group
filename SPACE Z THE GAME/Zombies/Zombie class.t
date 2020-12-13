@@ -14,7 +14,7 @@ class ZombieClass : Thing
     getHP () {
         "Current Health: <<ZombieCurHP>>";
     } // end of getHP
-     
+        
     // If the player tries to take the zombie it will not let them.
     dobjFor(Take){
       verify() { 
@@ -25,6 +25,9 @@ class ZombieClass : Thing
     // If the player tries to attack the zombie it will let them.
     dobjFor(Attack){    
         action() { 
+            
+
+            
             // If the current health is 0 the zombie is dead.
             if(ZombieCurHP <= 0){
                 "The zombie is already dead.";
@@ -92,9 +95,27 @@ class ZombieClass : Thing
             } // end of else
         } // end of if
     } // end of ZombieHP    
-;
 
-
+// check(){
+//    local x;
+//    if(location == me.location){
+//        "The zombie tries to bite you..."; 
+//       
+//            x = rand(100); // Generates a random number.
+//            
+//            // If the randomly generated number is greater then 50 then the zombie sucessfully attacks the player. Else it misses.
+//            if(x >=50){
+//                "It bit you! ";
+//                MyHP.damageHP (); 
+//            } // end of if
+//            else{
+//                "It missed...";
+//            } // end of else
+//        } // end of if       
+//    }// end action
+//    
+   
+;// end zombie class
 /*
  * A legless zombie enemy.
  */ 
@@ -103,11 +124,11 @@ LeglessZombie : ZombieClass
     noun = 'Legless/Legless Zombie' // Nouns that the object may be known as.
     desc = "A legless rotting zombie that is dragging itself around on the floor."  // Description of the object.
     adjective = 'legless' 'zombie'  // Attributes that the object has.
-    location = Bathroom  // Location of the object.
+    location = nil  // Location of the object.
     ZombieCurHP = 2 //Zombie current health
-    pic = artBanner.showArt('bloodyzombie') // The art that is displayed when the item is looked at.   
+    pic = artBanner.showArt('bloodyzombie') // The art that is displayed when the item is looked at. 
 ;
-
+           
 
 /*
  * A armless zombie enemy.
@@ -117,6 +138,6 @@ ArmlessZombie : ZombieClass
     noun = 'Armless/Armless Zombie' // Nouns that the object may be known as.
     desc = "A armless rotting zombie that is walking around the room."  // Description of the object.
     adjective = 'armless' 'zombie'  // Attributes that the object has.
-    location = DockingComp  // Location of the object.
+    location = nil  // Location of the object.
     pic = artBanner.showArt('womanzombie') // The art that is displayed when the item is looked at.
 ;

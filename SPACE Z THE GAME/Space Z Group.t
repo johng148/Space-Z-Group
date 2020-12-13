@@ -51,10 +51,22 @@ gameMain: GameMainDef
 /*
  * Door keys are defined outside of the rooms and then placed inside with @.
  */
-SecurityKey : Key 'Security key/ security key' 'Security key' @Bathroom pic = artBanner.showArt('keycard');
+SecurityKey : Key 'Security key/ security key' 'Security key' @Bathroom pic = artBanner.showArt('keycard')
+    
+    // spawned zombies after taking
+    dobjFor(Take){
+      action() { 
+           "You hear loud rustling in the Sleeping Quarters. ";
+           ArmlessZombie.moveInto(SleepingQuarters); 
+           LeglessZombie.moveInto(CommonRoom);    
+        }// end take
+    }// end action
+;
+
+
 MedKey : Key 'Medbay key/ med bay key' 'MedBay key' @Galley pic = artBanner.showArt('keycard');
 ShuttleKey : Key 'Shuttlebay key/shuttle bay key' 'Shuttle Bay key' @Bridge pic = artBanner.showArt('keycard');
-BathKey : Key 'bathroom key/ bath room key' 'Bathroom key' @MedBay pic = artBanner.showArt('keycard');
+BathKey : Key 'bathroom key/ bath room key' 'Bathroom key' @SleepingQuarters pic = artBanner.showArt('keycard');
 
 
 /*
