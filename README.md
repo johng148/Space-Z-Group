@@ -47,17 +47,17 @@ SPACE Z THE GAME directory: includes the actual source game files with all of th
 
 ->obj directory: directory automatically created by the TADS engine that contains the compiled object game files.
 
-->CompletedGame directory: contains the playable Windows exectuable and the zip files that can be downlodaded for other systems.
+CompletedGame directory: contains the playable Windows exectuable and the zip files that can be downlodaded for other systems.
 
 
 **How to Build and Play Game:**
 
-The game is directly playable on a Windows computer by downloading the executable: https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.exe
+The game is directly playable on a Windows computer by downloading the executable: https://github.com/johng148/Space-Z-Group/blob/master/CompletedGame/Space%20Z%20Group.exe
 
 For MAC users, the player has to download and install the appropriate interpreter for their system: https://www.tads.org/tads3.htm# (either QTads or CocoaTADS).
 For Unix/Linux users, the player has to download and install either QTads or FrobTads. FrobTads is a console text-only interpreter: https://www.tads.org/tads3.htm#.
 For support in downloading and installing the QTads interpreter refer to https://realnc.github.io/qtads/old_index.html#Download.
-Once QTads (or CocoaTADS) has been installed, the player can download the zipped game file from: https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.zip.
+Once QTads (or CocoaTADS) has been installed, the player can download the zipped game file from: https://github.com/johng148/Space-Z-Group/blob/master/CompletedGame/Space%20Z%20Group.zip
 
 **Current Progress:**
 
@@ -70,7 +70,7 @@ This current version of the game is a fully functional game that can be won, and
 This is the final demo to be presented in class. In this version, we have finished the combat implementation so that the Zombie class creates a generic zombie type that can be implemented with different characteristics, such as different hit points and different descriptions. We have also consolidated the zombie attacks, so that each zombie has to be attacked separately and dies separately from the other zombie objects that may be present. We also decided to not implement zombie respawning in the same room because it was interfering with the existing zombie objects. The demo also includes an updated key with basic commands. A new major functionality that was included in this version is a banner implementation for game art. ASCII art was created from free image sources and gets displayed for specific objects such as a cactus, the keys, and the zombies, if the player uses the command “Look at X”. The art banner will then show the graphic that is tied to that object, if any.
 
 As in prior demos, the game can be directly run on any Windows platform with the file:
-https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.exe.
+https://github.com/johng148/Space-Z-Group/blob/master/CompletedGame/Space%20Z%20Group.exe
 
 For MAC users, the player has to download and install the appropriate interpreter for their system: https://www.tads.org/tads3.htm# (either QTads or CocoaTADS).
 
@@ -80,7 +80,7 @@ https://www.tads.org/tads3.htm#.
 For support in downloading and installing the QTads interpreter refer to: https://realnc.github.io/qtads/old_index.html#Download.
 
 Once QTads (or CocoaTADS) has been installed, the player can download the zipped game file from:
-https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.zip
+https://github.com/johng148/Space-Z-Group/blob/master/CompletedGame/Space%20Z%20Group.zip
 
 
 **Demo 3 (11/29/2020)**
@@ -90,12 +90,12 @@ In this demo, we have included a zombie class that defines a zombie as a Thing. 
 
 **Demo 2 (11/8/2020)**
 
-The updates for this Demo version are as follows: We have broken up the source code into separate directories. Also, we have begun to implement combat system by adding functions to increase and decrease health, an object that heals (first aid kit), as well as a base object that deals damage and can kill the player ending the game. The game is directly playable on a Windows computer by downloading the executable: https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.exe
+The updates for this Demo version are as follows: We have broken up the source code into separate directories. Also, we have begun to implement combat system by adding functions to increase and decrease health, an object that heals (first aid kit), as well as a base object that deals damage and can kill the player ending the game. The game is directly playable on a Windows computer by downloading the executable: https://github.com/johng148/Space-Z-Group/blob/master/CompletedGame/Space%20Z%20Group.exe
 
 For MAC users, the player has to download and install the appropriate interpreter for their system: https://www.tads.org/tads3.htm# (either QTads or CocoaTADS).
 For Unix/Linux users, the player has to download and install either QTads or FrobTads. FrobTads is a console text-only interpreter: https://www.tads.org/tads3.htm#.
 For support in downloading and installing the QTads interpreter refer to https://realnc.github.io/qtads/old_index.html#Download.
-Once QTads (or CocoaTADS) has been installed, the player can download the zipped game file from: https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.zip.
+Once QTads (or CocoaTADS) has been installed, the player can download the zipped game file from: https://github.com/johng148/Space-Z-Group/blob/master/CompletedGame/Space%20Z%20Group.zip
 
 **Demo 1 (10/24/2020)**
 
