@@ -13,7 +13,41 @@ During the exploration of the space station, the player can travel from room to 
 To create the game we are using TADS (Text Adventure Development System) as an engine.
 https://www.tads.org/
 
+**Repository Structure:**
+
+The root directory includes the project documentation: Architecture, Design, Problem Statement, Requirements, Test Report and User Stories, which can be also be accessed through the Group webpage: CS371 Group Project  https://johng148.github.io/Space-Z-Group/
+
+SPACE Z THE GAME directory: includes the actual source game files with all of the linked libraries and the game art that was incorporated.
+->GameArt directory: contains the game art library, as well as a directory with game art.
+-->asciiArt directory: contains the jpg art files used in the game.
+->Graphics directory: contains game architecture diagrams as well a cheater's guide to the game map.
+->HPBanner directory: contains the hit points banner library source code.
+-->hpgraphics directory: contains the graphics used in the hit points banner.
+->NPCs directory: contains the source code for all of the NPCs included in the game.
+->Rooms directory: contains the source code for the rooms that make up the space station.
+->Zombies directory: contains the zombie class
+->compass directory: contains the compass rose library source code (third party extension).
+-->compassres directory: contains the graphics used in the compass banner.
+-->doc directory: contains documentation for the third party extension.
+-->en_us directory: contains another source file for the compass banner extension.
+->hints directory: contains the hints source file.
+->obj directory: directory automatically created by the TADS engine that contains the compiled object game files.
+->CompletedGame directory: contains the playable Windows exectuable and the zip files that can be downlodaded for other systems.
+
+**How to Build and Play Game:**
+
+The game is directly playable on a Windows computer by downloading the executable: https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.exe
+
+For MAC users, the player has to download and install the appropriate interpreter for their system: https://www.tads.org/tads3.htm# (either QTads or CocoaTADS).
+For Unix/Linux users, the player has to download and install either QTads or FrobTads. FrobTads is a console text-only interpreter: https://www.tads.org/tads3.htm#.
+For support in downloading and installing the QTads interpreter refer to https://realnc.github.io/qtads/old_index.html#Download.
+Once QTads (or CocoaTADS) has been installed, the player can download the zipped game file from: https://github.com/johng148/Space-Z-Group/blob/master/The%20Game/Space%20Z%20Group.zip.
+
 **Current Progress:**
+
+**Final Implementation (12/13/2020)**
+
+This current version of the game is a fully functional game that can be won, and can also be lost through combat with zombies (the zombies damage the player's health). There are several NPCs throughout the game that the player can interact with, and one provides a useful object. The player can encounter the zombies after they get to a certain level by discovering and picking up the Security key; the zombies won't appear until that time. As in the prior demos, game art now appears when a player looks at an object, and their health is always displayed in the hit points banner. 
 
 **Demo 4 (12/6/2020)**
 
