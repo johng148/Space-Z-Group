@@ -79,7 +79,7 @@ chef: Person 'chef' 'chef'  // Defines that this NPC is a chef.
 +++ ByeTopic
     "<q>Good luck to you. I hope you are able to stay safe here,</q> you say.<.p>
     <q>Before you leave, make sure that you take the knife with you. You\'ll need
-    some protection.</q> > She says with an earnest look on her face.<.p>" 
+    some protection.</q>  She says with an earnest look on her face.<.p>" 
 ;
 
 
@@ -114,12 +114,6 @@ chef: Person 'chef' 'chef'  // Defines that this NPC is a chef.
     } // end of topicResponse
 ;
 
-
-//++ AskForTopic @Knife
-//  "She doesn't have anymore spare knives. "
-//  isConversational = nil
-//;
-//
 
 ++ AskTellTopic @Knife
   '<q>That is a very long and sharp-looking knife</q> you remark.\b
