@@ -72,6 +72,9 @@ showArt(description)  {
     else if (description == 'kitchenknife' )  {
         artBanner.updateContents('<img src="asciiArt/kitchenknife.jpg" height="250">');
     } // end of else if   
+    else if (description == 'captain' )  {
+        artBanner.updateContents('<img src="asciiArt/captain.jpg" height="250">');
+    } // end of else if   
 } // end of function showArt
 } // end of artBanner
  

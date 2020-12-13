@@ -18,6 +18,7 @@ resource: asciiArt
 
 # bloodyzombie.jpg -- image source: www.Freepick.com -- image author: kues1 -- image name: Zombi with a white eye and raised hands Free Photo 
 # cactus.jpg -- image source: commons.wikimedia.org -- image author: Petr Vodicka -- image name: Gymnocalycium Mostii  
+# captian.jpg -- image source: www.freepik.com -- image author: wavebreakmedia-micro -- image name: Happy pilot and air hostess standing in the airport terminal Free Photo
 # chef.jpg -- image source: www.freepik.com -- image author: 8photo -- image name: Female chef holding knife and sharpener in white uniform and looking serious Free Photo   
 # Disfiguredzombie.jpg -- image source: www.pixabay.com -- image author: ayoub wardin -- image name: zombie-death-dead-day-of-the-dead-1801470  
 # doctor.jpg -- image source: www.shutterstock.com -- image author: OPOLJA-- image name: Cheerful mature doctor posing and smiling at camera, healthcare and medicine  
@@ -30,4 +31,4 @@ resource: asciiArt
 # sword.jpg -- image source: commons.wikimedia.org -- image author: Dvereckis-- image name: Model 1832 Foot Artillery Sword  
 # veteran.jpg -- image source: www.pixabay.com -- image author: Pexels  -- image name: beard-1851469_128 
 # womanzombie.jpg -- image source: www.pixabay.com -- image author: englishlikeanative -- image name: Angry Zombie Rage 
-# zombiehand.jpg -- image source: www.freepik.com -- image author: www.Freepick.com -- image name: Zombie hand with signboard on forest ground Free Photo   
+# zombiehand.jpg -- image source: www.freepik.com -- image author: freepik -- image name: Zombie hand with signboard on forest ground Free Photo   
