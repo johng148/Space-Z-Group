@@ -18,21 +18,37 @@ https://www.tads.org/
 The root directory includes the project documentation: Architecture, Design, Problem Statement, Requirements, Test Report and User Stories, which can be also be accessed through the Group webpage: CS371 Group Project  https://johng148.github.io/Space-Z-Group/
 
 SPACE Z THE GAME directory: includes the actual source game files with all of the linked libraries and the game art that was incorporated.
+
 ->GameArt directory: contains the game art library, as well as a directory with game art.
+
 -->asciiArt directory: contains the jpg art files used in the game.
+
 ->Graphics directory: contains game architecture diagrams as well a cheater's guide to the game map.
+
 ->HPBanner directory: contains the hit points banner library source code.
+
 -->hpgraphics directory: contains the graphics used in the hit points banner.
+
 ->NPCs directory: contains the source code for all of the NPCs included in the game.
+
 ->Rooms directory: contains the source code for the rooms that make up the space station.
+
 ->Zombies directory: contains the zombie class
+
 ->compass directory: contains the compass rose library source code (third party extension).
+
 -->compassres directory: contains the graphics used in the compass banner.
+
 -->doc directory: contains documentation for the third party extension.
+
 -->en_us directory: contains another source file for the compass banner extension.
+
 ->hints directory: contains the hints source file.
+
 ->obj directory: directory automatically created by the TADS engine that contains the compiled object game files.
+
 ->CompletedGame directory: contains the playable Windows exectuable and the zip files that can be downlodaded for other systems.
+
 
 **How to Build and Play Game:**
 
