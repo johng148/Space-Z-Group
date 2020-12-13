@@ -49,7 +49,7 @@ gameMain: GameMainDef
 
 
 /*
- * Door keys are defined outside of the rooms and then placed inside with @.
+ * Discovering this key spawns zombies in specific rooms.
  */
 SecurityKey : Key 'Security key/ security key' 'Security key' @Bathroom pic = artBanner.showArt('keycard')
     
@@ -66,10 +66,12 @@ SecurityKey : Key 'Security key/ security key' 'Security key' @Bathroom pic = ar
     }// end action
 ;
 
-
-MedKey : Key 'Medbay key/ med bay key' 'Med Bay key' @Galley pic = artBanner.showArt('keycard');
+/*
+ * These are the other door keys are defined outside of the rooms and then placed inside with @.
+ */
+MedKey : Key 'Medbay key/ med key/ bay key' 'Med Bay key' @Galley pic = artBanner.showArt('keycard');
 ShuttleKey : Key 'Shuttlebay key/shuttle bay key' 'Shuttle Bay key' @Bridge pic = artBanner.showArt('keycard');
-BathKey : Key 'bathroom key/ bath room key' 'Bathroom key' @SleepingQuarters pic = artBanner.showArt('keycard');
+BathKey : Key 'bathroom key/ bath room key' 'Bathroom key' @MedBay pic = artBanner.showArt('keycard');
 
 
 /*

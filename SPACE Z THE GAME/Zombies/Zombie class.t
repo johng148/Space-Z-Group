@@ -142,6 +142,7 @@ ArmlessZombie : ZombieClass
     pic = artBanner.showArt('womanzombie') // The art that is displayed when the item is looked at.
 ;
 
+
 FaceZombie : ZombieClass  
     name = 'Face Zombie'  // Name of the object.
     noun = 'Face/Face Zombie' // Nouns that the object may be known as.
@@ -150,6 +151,7 @@ FaceZombie : ZombieClass
     location = nil  // Location of the object.
     pic = artBanner.showArt('disfiguredzombie') // The art that is displayed when the item is looked at.
 ;
+
 
 FullZombie : ZombieClass  
     name = 'Full Zombie'  // Name of the object.

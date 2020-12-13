@@ -29,4 +29,5 @@ Galley: Room 'Galley'
     "A well sharpened Chef's knife; it could be useful."
     pic = artBanner.showArt('kitchenknife') // The art that is displayed when the item is looked at.
     location = Galley // Location of the object.
+    isListed = nil; // removes the knife from the room list.
 ;
