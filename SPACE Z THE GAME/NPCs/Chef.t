@@ -103,8 +103,12 @@ chef: Person 'chef' 'chef'  // Defines that this NPC is a chef.
 		click.<.p>
 	  <q>Thanks</q> you say to her.<.p>"
 	;
-      Knife.moveInto(gActor);      
-   }
+        
+        if(Knife.location != me){  
+            Knife.moveInto(gActor);      
+        } // end of if
+        
+    } // end of topicResponse
 ;
 
 
