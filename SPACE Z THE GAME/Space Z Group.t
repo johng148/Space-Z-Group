@@ -61,6 +61,8 @@ SecurityKey : Key 'Security key/ security key' 'Security key' @Bathroom pic = ar
            LeglessZombie.moveInto(CommonRoom); 
            FaceZombie.moveInto(MessHall); 
            FullZombie.moveInto(DockingComp); 
+           SecurityKey.moveInto(gActor);
+
             
         }// end take
     }// end action

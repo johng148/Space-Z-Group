@@ -125,7 +125,7 @@ LeglessZombie : ZombieClass
     desc = "A legless rotting zombie that is dragging itself around on the floor."  // Description of the object.
     adjective = 'legless' 'zombie'  // Attributes that the object has.
     location = nil  // Location of the object.
-    ZombieCurHP = 2 //Zombie current health
+    ZombieCurHP = 5 //Zombie current health
     pic = artBanner.showArt('bloodyzombie') // The art that is displayed when the item is looked at. 
 ;
            
